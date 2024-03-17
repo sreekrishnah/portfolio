@@ -1,0 +1,44 @@
+
+
+nav {
+  z-index: 99;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  color: #ffff;
+  text-shadow: 2px 2px 7px #000000;
+}
+
+nav h1 {
+  margin-left: 4rem;
+  font-family: "Timmana", sans-serif;
+  background-color: #c59f86;
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align: center;
+  border-radius: 50%;
+}
+
+nav ul {
+  font-family: "League Spartan", sans-serif;
+}
+
+
+nav a::after {
+  z-index: -2;
+  position: relative;
+  top: -7px;
+  margin: auto;
+  content: '';
+  display: block;
+  height: 3px;
+  width: 0;
+  border-radius: 30%;
+  transition: all 500ms ease;
+}
+
+nav a:hover::after,
+nav a.active::after {
+  background-color: #e61638;
+  width: 3rem;
+}

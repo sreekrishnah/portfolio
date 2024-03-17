@@ -1,0 +1,28 @@
+/* font_families {
+    font-family: "Tomorrow", sans-serif;
+    font-family: "Silkscreen", sans-serif;
+    font-family: "Timmana", sans-serif;
+    font-family: "Lavishly Yours", cursive;
+    font-family: "League Spartan", sans-serif;
+} */
+
+html{
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #ddd1c7;
+    color: #262527;
+}
+
+section{
+    height: 100vh;
+    scroll-snap-align: center;
+}

@@ -1,0 +1,89 @@
+
+#Home{
+    position: relative;
+    background:linear-gradient(180deg,#02133a,#62598b);
+}
+
+#Home .forest{
+    width:100vw;
+    position: absolute;
+    bottom: -1.2rem;
+    filter: opacity(90%);
+}
+
+#Home .clouds{
+    width:100vw;
+    position: absolute;
+    top: 0rem;
+    filter: opacity(50%);
+}
+
+#Home .tools{
+    width:25rem;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    filter: opacity(90%);
+}
+
+#Home h2{
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    font-family: "League Spartan", sans-serif;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    font-weight: bold;
+    color:  #beaeae;
+    text-shadow: 3px 3px 10px #151516;
+}
+
+#Home h1{
+    width: 30%;
+    position: absolute;
+    top: 40%;
+    left: 15%;
+    font-family: "Timmana", sans-serif;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: bold;
+    color:  #ffff;
+    text-shadow: 3px 3px 10px #101011;
+    line-height: 1.5rem;
+}
+
+#Home h1::after{
+    display: inline-block;
+    content:'';
+    margin-left: .5rem;
+    width:0.3rem;
+    height: 2.5rem;
+    border-radius: 20%;
+    background-color:#ffff;
+    animation: blink 1000ms infinite;
+  }
+  
+.social-profiles{
+    position: absolute;
+    top: 54%;
+    left: 15%;
+}
+
+.social-profiles ion-icon{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-right: 2rem;
+    color: #ffff;
+    transition: all ease 200ms;
+}
+
+.social-profiles ion-icon:hover{
+    color: #ac3535;
+    cursor: pointer;
+}
+
+  @keyframes blink{
+    to{
+      background:transparent;
+    }
+  }
