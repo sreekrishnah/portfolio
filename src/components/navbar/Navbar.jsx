@@ -28,11 +28,11 @@ function Navbar() {
   
   return (
     <>
-      <nav className='flex justify-between m-5'>
-        <motion.h1 className='uppercase p-4 text-5xl font-bold cursor-default' initial="hidden" animate="visible" variants={variant}><a href={`#Home`} className="hover:appearance-none active:appearance-none">sk</a></motion.h1>
-        <motion.ul className='flex p-4' initial="hidden" animate="visible" variants={ul_variant}>
+      <nav>
+        <motion.h1 initial="hidden" animate="visible" variants={variant}><a href={`#Home`}>sk</a></motion.h1>
+        <motion.ul initial="hidden" animate="visible" variants={ul_variant}>
           {navelements.map((value,index)=>{
-            return <motion.a href={`#${value}`} className='mr-10 px-5 py-2 capitalize text-lg font-semibold cursor-pointer hover:text-xl active:text-xl text-center ' key={index} variants={ul_variant}>{value}</motion.a>
+            return <motion.a href={`#${value}`} className='navigator' key={index} variants={ul_variant}>{value}</motion.a>
           })}
         </motion.ul>
       </nav>

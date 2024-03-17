@@ -1,6 +1,9 @@
 
 
 nav {
+  margin: 1.5rem;
+  display: flex;
+  justify-content: space-between;
   z-index: 99;
   position: fixed;
   top: 0;
@@ -10,6 +13,11 @@ nav {
 }
 
 nav h1 {
+  text-transform: uppercase;
+  padding: 1.5rem;
+  font-size: 3rem;
+  font-weight: 900;
+  cursor: pointer;
   margin-left: 4rem;
   font-family: "Timmana", sans-serif;
   background-color: #c59f86;
@@ -20,11 +28,23 @@ nav h1 {
 }
 
 nav ul {
+  display: flex;
+  padding: 1rem;
   font-family: "League Spartan", sans-serif;
 }
 
+.navigator{
+  margin-right: 2rem;
+  padding: 1rem 2rem;
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all ease 400ms;
+}
 
-nav a::after {
+
+.navigator::after {
   z-index: -2;
   position: relative;
   top: -7px;
@@ -37,8 +57,12 @@ nav a::after {
   transition: all 500ms ease;
 }
 
-nav a:hover::after,
-nav a.active::after {
+.navigator:hover,.navigator.active{
+  font-size: 1.3rem;
+}
+
+.navigator:hover::after,
+.navigator.active::after {
   background-color: #e61638;
   width: 3rem;
 }
