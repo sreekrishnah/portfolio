@@ -6,14 +6,32 @@
 .mountain{
     width:100vw;
     position: absolute;
-    bottom: 0rem;
+    bottom: 0;
     filter: opacity(100%);
-    overflow: hidden;
 }
 
 .clouds{
     width:100vw;
-    position: absolute;
+    position: relative;
     top: 0rem;
     filter: opacity(80%);
+    z-index: 1;
 }
+
+.about-container{
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    z-index: 4;
+    display: flex;
+}
+
+.academic-container{
+    margin-left: 2rem;
+    color: #0000;
+    width: 100%;
+}
+
+/* .sample{
+    color: #e7c60e;
+} */

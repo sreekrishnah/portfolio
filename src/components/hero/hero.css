@@ -29,7 +29,7 @@
 
 #Home h2{
     position: absolute;
-    top: 30%;
+    top: 27%;
     left: 15%;
     font-family: "League Spartan", sans-serif;
     text-transform: uppercase;
@@ -43,7 +43,7 @@
 #Home h1{
     width: 30%;
     position: absolute;
-    top: 40%;
+    top: 37%;
     left: 15%;
     font-family: "Timmana", sans-serif;
     text-transform: uppercase;
@@ -90,7 +90,7 @@
     padding: 7px 14px;
     z-index: 99;
     position: relative;
-    top: 60%;
+    top: 62%;
     left: 15%;
     border-radius: .9rem;
     box-shadow: 5px 5px 7px #0000;
@@ -124,7 +124,7 @@
 .scroll-btn{
     width: 2.5rem;
     position: absolute;
-    top: 70%;
+    top: 72%;
     left: 22%;
     z-index: 99;
 }
