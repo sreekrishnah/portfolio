@@ -1,0 +1,19 @@
+#About{
+    position: relative;
+    background:linear-gradient(180deg,#1f0537,#271770);
+}
+
+.mountain{
+    width:100vw;
+    position: absolute;
+    bottom: 0rem;
+    filter: opacity(100%);
+    overflow: hidden;
+}
+
+.clouds{
+    width:100vw;
+    position: absolute;
+    top: 0rem;
+    filter: opacity(80%);
+}

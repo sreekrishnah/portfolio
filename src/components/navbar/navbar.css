@@ -37,8 +37,8 @@ nav ul {
   margin-right: 2rem;
   padding: 1rem 2rem;
   text-transform: capitalize;
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 17px;
+  font-weight: 500;
   cursor: pointer;
   transition: all ease 400ms;
 }
@@ -58,7 +58,7 @@ nav ul {
 }
 
 .navigator:hover,.navigator.active{
-  font-size: 1.3rem;
+  font-size: 20px;
 }
 
 .navigator:hover::after,
