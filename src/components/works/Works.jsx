@@ -1,3 +1,4 @@
+import './works.css'
 
 function Works() {
     return (

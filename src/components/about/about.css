@@ -8,11 +8,12 @@
     position: absolute;
     bottom: 0;
     filter: opacity(100%);
+    z-index: 0;
 }
 
 .clouds{
     width:100vw;
-    position: relative;
+    position: absolute;
     top: 0rem;
     filter: opacity(80%);
     z-index: 1;
@@ -27,11 +28,146 @@
 }
 
 .academic-container{
+    position: static;
     margin-left: 2rem;
     color: #0000;
-    width: 100%;
+    width: 80%;
+}
+
+.academic-container .vl{
+    position: absolute;
+    width: 7px;
+    height: 100vh;
+    background: #fff;
+    top: 0;
+    left: 30.5%;
+    margin-left: -3px;
+    z-index: -1;
+}
+
+.skill-container{
+ background:none;
+}
+
+.skill-container hr{
+    position: relative;
+    width:18rem;
+    top: 20%;
+    right: 20%;
+}
+
+.mainprogresscircle{
+    width: 6rem;
+    filter: drop-shadow(10px 10px 10px #ec840d);
+}
+
+.leftprogresscircle{
+    margin: 1rem;
+    width: 4rem;
+    filter: drop-shadow(5px 5px 10px #ada454de);
 }
 
 /* .sample{
     color: #e7c60e;
 } */
+
+.about-section-2{
+    z-index: 3;
+    position: relative;
+    color: #000000;
+    padding:7rem 5rem;
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    column-gap: 3rem;
+}
+
+.section2-content{
+    width: 16rem;
+    padding: 1rem;
+    background-color: #f1f2f2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1rem;
+    box-shadow: 4px 4px #96a2dd;
+    transition: all ease 600ms;
+}
+
+.about-text-box{
+    height: 22rem;
+    padding: 1rem;
+    background-color: #ccc8c8;
+    border-radius: 1rem;
+}
+
+.section2-content:hover{
+    box-shadow: 7px 7px #5266ce;
+}
+
+.about-text-box span{
+    color: #818181;
+    font-size: .8rem;
+    font-weight: 600;
+
+}
+
+.about-text-box hr{
+    margin: 1rem 0;
+    height: 2px;
+    border: none;
+    background-color: #818181;
+}
+
+.about-text-box p{
+    font-size: .9rem;
+}
+
+.about-text-box a{
+    color: #494545;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.section2-content img{
+    width: 5rem;
+    filter: drop-shadow(5px 5px 1px #aaa);
+    transition: all ease 500ms;
+}
+
+.section2-content img:hover{
+    transform: scale(1);
+}
+
+.text-box-thumnail{
+    top: -10%;
+    position: relative;
+}
+
+@media screen and (max-width:1115px) {
+    .academic-container{
+        margin-left: 1rem;
+        color: #0000;
+    }
+    
+    .academic-container .vl{
+        left: 28.5%;
+    }
+    
+    .mainprogresscircle{
+        width: 5rem;
+        filter: drop-shadow(10px 10px 10px #ec840d);
+    }
+    
+    .leftprogresscircle{
+        margin: 1rem;
+        width: 3.5rem;
+        filter: drop-shadow(5px 5px 10px #ada454de);
+    }
+    .section2-content{
+        width: 13rem;
+    }
+
+    .about-text-box{
+        overflow: scroll;
+    }
+}

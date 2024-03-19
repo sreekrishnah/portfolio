@@ -1,5 +1,4 @@
 
-
 nav {
   margin: .5rem;
   display: flex;
@@ -44,25 +43,17 @@ nav ul {
 }
 
 
-.navigator::after {
-  z-index: -2;
-  position: relative;
-  top: -7px;
-  margin: auto;
-  content: '';
-  display: block;
-  height: 3px;
-  width: 0;
-  border-radius: 30%;
-  transition: all 500ms ease;
-}
-
 .navigator:hover,.navigator.active{
   font-size: 20px;
+  filter: drop-shadow(10px 10px 1px #fff)
 }
 
-.navigator:hover::after,
+/* .navigator:hover::after,
 .navigator.active::after {
   background-color: #e61638;
   width: 3rem;
+} */
+
+@media screen and (max-width:375px) {
+  
 }

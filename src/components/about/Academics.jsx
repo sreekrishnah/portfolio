@@ -1,3 +1,4 @@
+import {motion} from 'framer-motion';
 import './academic.css'
 
 const school = [
@@ -32,14 +33,20 @@ const school = [
 
 const Container = (props)=>{
     return <div className={`school-container scon${props.id}`}>
-      <div className="text-box">
+      <motion.div className="text-box"
+      initial={{y:-100,opacity:0}}
+      transition={{delay:1,duration:1}}
+      animate={{y:0,opacity:1}}>
           <p className='year'>{props.year}</p>
           <h1>{props.name}</h1>
           <p className='place'>{props.place}</p>
           <p className='branch'>{props.branch}</p>
           <h2>{props.qualification} - {props.percentage}</h2>
-      </div>
-      <ion-icon name={props.icon}></ion-icon>
+      </motion.div>
+      <motion.div 
+      initial={{opacity:0}}
+      transition={{delay:2,duration:.8}}
+      animate={{opacity:1}}><ion-icon name={props.icon}></ion-icon></motion.div>
     </div>
 }
 

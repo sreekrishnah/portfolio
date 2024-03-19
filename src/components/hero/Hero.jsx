@@ -45,7 +45,7 @@ function Hero() {
       initial={{opacity:0}} 
       transition={{duration:1,delay:.8}} 
       animate={{opacity:1}}>Know me!</motion.button></a>
-      <a href='#About'><motion.button className='contact-btn' 
+      <a href='#Contact'><motion.button className='contact-btn' 
       initial={{opacity:0}} 
       transition={{duration:1,delay:.8}} 
       animate={{opacity:1}}>Hire me!</motion.button></a>

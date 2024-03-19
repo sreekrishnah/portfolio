@@ -8,22 +8,31 @@
     align-items: center;
 }
 
-.progressbar-container h2{
-    position: relative;
-    right: -12%;
-    padding: .5rem 1rem;
-    color: #fff;
-    font-weight: 700;
-    text-transform: uppercase;
-    font-size: 1.3rem;
-    text-wrap: nowrap;
-    text-shadow: 2px 2px 3px #e7c60e;
-}
 
 .progressbar-path{
     fill: #5266ce;
 }
 
-.progressbar{
-    width: 8rem;
+.main-title{
+    position: relative;
+    right: -12%;
+    padding: .5rem;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    text-wrap: nowrap;
+    text-shadow: 2px 2px 3px #000000;
+}
+
+.left-title{
+    position: relative;
+    right: -12%;
+    padding: .5rem .4rem;
+    color: #fff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1rem;
+    text-wrap: nowrap;
+    text-shadow: 2px 2px 3px #000000;
 }

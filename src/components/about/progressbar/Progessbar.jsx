@@ -3,40 +3,45 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import './progressbar.css'
 
-function CircularProgressBar() {
-  const [percentage, setPercentage] = useState(0);
+function CircularProgressBar(props) {
+
+  let {name,percentage,pathColor,textColor,textSize,header} = props;
+   textColor = textColor?textColor:'ffff';
+  const [percentagecount, setPercentagecount] = useState(0);
 
   useEffect(() => {
     setTimeout(() => {
-      if (percentage < 80) {
-        setPercentage(percentage + 1);
+      if (percentagecount < percentage) {
+        setPercentagecount(percentagecount + 1);
       }
     }, 50);
-  }, [percentage]);
+  }, [percentagecount]);
 
   return (
     <div className='progressbar-container'>
-      <div className='progressbar'>
-        <CircularProgressbar value={percentage} text={`${percentage}%`} styles={{
+      <div className={`${name}progresscircle`}>
+        <CircularProgressbar value={percentagecount} text={`${percentagecount}%`} styles={{
             path: {
                 // Path color
-                stroke: `#e7c60e`,
+                stroke: `#${pathColor}`,
             },
             trail: {
                 // Trail color
                 stroke: '#d6d6d6',
                 // Whether to use rounded or flat corners on the ends - can use 'butt' or 'round'
-                strokeLinecap: 'butt',
+                strokeLinecap: 'round',
                 // Rotate the trail
-                transform: 'rotate(0.30turn)',
+                transform: 'rotate(0.90turn)',
                 transformOrigin: 'center',
               },
               // Customize the text
               text: {
                 // Text color
-                fill: '#e7c60e',
+                fill: `#${textColor}`,
                 // Text size
-                fontSize: '24px',
+                fontSize: `#${textSize}`,
+
+                fontWeight:800,
               },
               // Customize background - only used when the `background` prop is true
               background: {
@@ -44,7 +49,7 @@ function CircularProgressBar() {
               },
             }}/>
       </div>
-      <h2>Web Development</h2>
+      <h2 className={`${name}-title`}>{header}</h2>
     </div>
   );
 }
