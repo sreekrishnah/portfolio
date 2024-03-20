@@ -12,7 +12,12 @@
 }
 
 .text-box{
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.61);
+    box-shadow: 4px 4px 10px 2px #000000;
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
     padding: 20px 20px;
     border-radius: 6px;
     font-size: 1rem;
@@ -21,7 +26,7 @@
 
 .year{
     font-size: 13px;
-    color: #696666;
+    color: #3d3939;
 }
 
 .school-container h1, .school-container h2{

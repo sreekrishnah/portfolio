@@ -37,10 +37,10 @@
 .academic-container .vl{
     position: absolute;
     width: 7px;
-    height: 100vh;
+    height: 75vh;
     background: #fff;
-    top: 0;
-    left: 29.8%;
+    top: 10%;
+    left: 30.6%;
     margin-left: -3px;
     z-index: -1;
 }
@@ -49,6 +49,7 @@
  background:none;
 }
 .mainprogresscircle{
+    padding: .5rem;
     width: 6rem;
     filter: drop-shadow(10px 10px 10px #000000);
 }

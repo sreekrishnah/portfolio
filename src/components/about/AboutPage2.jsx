@@ -2,15 +2,73 @@ import './about.css'
 import {motion} from 'framer-motion';
 
 function AboutPage2() {
+
+    const boxvariant1 = {
+        initial:{
+          y:50,
+          opacity:0,
+        },
+        animate:{
+          y:0,
+          opacity:1,
+          transition:{
+            duration:.5,
+          }
+        }
+      }
+
+      const boxvariant2 = {
+        initial:{
+          y:50,
+          opacity:0,
+        },
+        animate:{
+          y:0,
+          opacity:1,
+          transition:{
+            duration:.5,
+            delay:.2,
+          }
+        }
+      }
+      const boxvariant3 = {
+        initial:{
+          y:50,
+          opacity:0,
+        },
+        animate:{
+          y:0,
+          opacity:1,
+          transition:{
+            duration:.5,
+            delay:.4,
+          }
+        }
+      }
+      const boxvariant4 = {
+        initial:{
+          y:50,
+          opacity:0,
+        },
+        animate:{
+          y:0,
+          opacity:1,
+          transition:{
+            duration:.5,
+            delay:.6,
+          }
+        }
+      }
+
   return (
     <section id="About" className='About-2'>
          <img className="clouds" src="/clouds.svg" alt=""/>
          <img src='/mountain.png' alt='' className='mountain'/>
         <div className="about-section-2">
         <motion.div className="section2-content"
-        initial={{y:100,opacity:0}}
-        transition={{duration:.4,delay:.2}}
-        animate={{y:0,opacity:1}}
+        variants={boxvariant1}
+        initial='initial'
+        whileInView='animate'
         >
             <img src="/springboard.webp" alt="" className='text-box-thumnail'/>
             <div className="about-text-box">
@@ -21,9 +79,9 @@ function AboutPage2() {
             </div>
             </motion.div>
             <motion.div className="section2-content"
-            initial={{y:100,opacity:0}}
-            transition={{duration:.4,delay:.4}}
-            animate={{y:0,opacity:1}}
+           variants={boxvariant2}
+      initial='initial'
+      whileInView='animate'
             >
             <img src="/frontend-mentor.avif" alt="" className='text-box-thumnail'/>
             <div className="about-text-box"><span>In Progress</span>
@@ -32,9 +90,9 @@ function AboutPage2() {
                 </p></div>
             </motion.div>
             <motion.div className="section2-content"
-            initial={{y:100,opacity:0}}
-            transition={{duration:.4,delay:.6}}
-            animate={{y:0,opacity:1}}
+            variants={boxvariant3}
+            initial='initial'
+            whileInView='animate'
             >
             <img src="/aws.png" alt="" className='text-box-thumnail'/>
             <div className="about-text-box"><span>17th Nov 2023</span>
@@ -43,9 +101,9 @@ function AboutPage2() {
                 </p></div>
             </motion.div>
             <motion.div className="section2-content"
-            initial={{y:100,opacity:0}}
-            transition={{duration:.4,delay:.8}}
-            animate={{y:0,opacity:1}}
+            variants={boxvariant4}
+            initial='initial'
+            whileInView='animate'
             >
             <img src="/coursera.png" alt="" className='text-box-thumnail'/>
             <div className="about-text-box"><span>17th Nov 2023</span>

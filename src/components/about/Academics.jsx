@@ -32,11 +32,40 @@ const school = [
 ]
 
 const Container = (props)=>{
+
+  const textBoxvariant ={
+    initial:{
+      y:-80,
+      opacity:0,
+    },
+    animate:{
+      y:0,
+      opacity:1,
+      transition:{
+        duration:1,
+        delay:1,
+      }
+    }
+  }
+
+  const iconvariant ={
+    initial:{
+      opacity:0,
+    },
+    animate:{
+      opacity:1,
+      transition:{
+        duration:.8,
+        delay:2,
+      }
+    }
+  }
+
     return <div className={`school-container scon${props.id}`}>
       <motion.div className="text-box"
-      initial={{y:-100,opacity:0}}
-      transition={{delay:1,duration:1}}
-      animate={{y:0,opacity:1}}>
+      variants={textBoxvariant}
+      initial='initial'
+      whileInView='animate'>
           <p className='year'>{props.year}</p>
           <h1>{props.name}</h1>
           <p className='place'>{props.place}</p>
@@ -44,9 +73,9 @@ const Container = (props)=>{
           <h2>{props.qualification} - {props.percentage}</h2>
       </motion.div>
       <motion.div 
-      initial={{opacity:0}}
-      transition={{delay:2,duration:.8}}
-      animate={{opacity:1}}><ion-icon name={props.icon}></ion-icon></motion.div>
+      variants={iconvariant}
+      initial='initial'
+      whileInView='animate'><ion-icon name={props.icon}></ion-icon></motion.div>
     </div>
 }
 

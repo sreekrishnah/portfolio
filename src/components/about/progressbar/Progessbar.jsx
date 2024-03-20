@@ -6,6 +6,20 @@ import {motion} from 'framer-motion';
 
 function CircularProgressBar(props) {
 
+  const boxvariant = {
+    initial:{
+      x:200,
+      opacity:0,
+    },
+    animate:{
+      x:0,
+      opacity:1,
+      transition:{
+        duration:1
+      }
+    }
+  }
+
   let {name,percentage,pathColor,textColor,textSize,header} = props;
    textColor = textColor?textColor:'ffff';
   const [percentagecount, setPercentagecount] = useState(0);
@@ -20,9 +34,9 @@ function CircularProgressBar(props) {
 
   return (
     <motion.div className='progressbar-container'
-      initial={{x:200,opacity:0}}
-      transition={{duration:1}}
-      animate={{x:0,opacity:1}}>
+      variants={boxvariant}
+      initial='initial'
+      whileInView='animate'>
       <div className={`${name}progresscircle`}>
         <CircularProgressbar value={percentagecount} text={`${percentagecount}%`} styles={{
             path: {

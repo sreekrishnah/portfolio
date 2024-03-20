@@ -1,4 +1,4 @@
-import {motion ,useScroll , useTransform} from 'framer-motion';
+import {animate, motion ,useScroll , useTransform} from 'framer-motion';
 import './about.css';
 import School from './Academics';
 import CircularProgressBar from './progressbar/Progessbar';
@@ -6,6 +6,19 @@ import { useRef } from 'react';
 import { Progress } from 'flowbite-react';
 
 function About() {
+
+  const linevariant = {
+    initial:{
+      opacity:0,
+    },
+    animate:{
+      opacity:1,
+      transition:{
+        duration:3,
+        delay:1,
+      }
+    }
+  }
 
   // const ref = useRef();
 
@@ -24,9 +37,7 @@ function About() {
           <div className="academic-container">
             <School/>
             <motion.div className="vl" 
-            initial={{height:0}}
-            transition={{duration:4}}
-            animate={{height:"100vh"}}></motion.div>
+            variants={linevariant} initial='initial' whileInView='animate'></motion.div>
           </div>
           <div className="skill-container">
             <CircularProgressBar
