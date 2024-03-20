@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import './progressbar.css'
+import {motion} from 'framer-motion';
 
 function CircularProgressBar(props) {
 
@@ -18,7 +19,10 @@ function CircularProgressBar(props) {
   }, [percentagecount]);
 
   return (
-    <div className='progressbar-container'>
+    <motion.div className='progressbar-container'
+      initial={{x:200,opacity:0}}
+      transition={{duration:1}}
+      animate={{x:0,opacity:1}}>
       <div className={`${name}progresscircle`}>
         <CircularProgressbar value={percentagecount} text={`${percentagecount}%`} styles={{
             path: {
@@ -50,7 +54,7 @@ function CircularProgressBar(props) {
             }}/>
       </div>
       <h2 className={`${name}-title`}>{header}</h2>
-    </div>
+    </motion.div>
   );
 }
 

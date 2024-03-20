@@ -33,41 +33,34 @@ function About() {
             name='main' 
             percentage={80}
             pathColor='FB6542'
-            textColor='FB6542'
             textSize={20}
             header='Frontend Development'/>
 
             <CircularProgressBar
              name='left' 
-            percentage={65}
-            pathColor='B08401'
-            textColor='B08401'
+            percentage={85}
+            pathColor='61DBFB'
             textSize={20}
-            header='Cloud Services - (AWS)'/>
-
-            <hr></hr>
+            header='React JS'/>
 
              <CircularProgressBar
              name='left' 
             percentage={90}
-            pathColor='FFBB00'
-            textColor='FFBB00'
+            pathColor='F0DB4F'
             textSize={20}
-            header='JavaScript ...'/>
+            header='JavaScript'/>
              <CircularProgressBar
              name='left' 
             percentage={70}
-            pathColor='408EC6'
-            textColor='408EC6'
+            pathColor='306998'
             textSize={20}
-            header='python ...'/>
+            header='python3'/>
             <CircularProgressBar
              name='left' 
             percentage={60}
-            pathColor='6AB187'
-            textColor='6AB187'
+            pathColor='484C89'
             textSize={20}
-            header='php & c ...'/>
+            header='php & c '/>
           </div>
         </div>
       </section>

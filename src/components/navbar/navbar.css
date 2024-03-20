@@ -9,6 +9,7 @@ nav {
   width: 100%;
   color: #ffff;
   text-shadow: 2px 2px 7px #000000;
+  background:transparent;
 }
 
 nav h1 {
