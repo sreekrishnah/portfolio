@@ -10,7 +10,8 @@ const workList = [
     desription:`"Designed and developed a global weather application, integrating OpenWeather API for real-time forecasts, offering seamless access to accurate weather worldwide."`,
     date:'Feb 26, 2024',
     button:'check weather',
-    link:'https://weather-from-openweather.netlify.app/',
+    viewlink:'https://weather-from-openweather.netlify.app/',
+    codelink:'https://github.com/SritharanKalimuthu/React_Learnings'
   },
   {
     id:2,
@@ -18,6 +19,7 @@ const workList = [
     name:'Book Store - CRUD',
     desription:`"Architected a CRUD book store application using MERN stack technology, facilitating seamless addition and removal of books. Empowering users with intuitive controls for efficient book management."`,
     date:'Mar 12, 2024',
+    codelink:'https://github.com/SritharanKalimuthu/Bookstore-CRUD'
   },
   {
     id:3,
@@ -26,25 +28,41 @@ const workList = [
     desription:`"Engineered an age calculator application utilizing React, providing efficient age calculation functionality. Seamlessly designed for user-friendly experience and intuitive interaction."`,
     date:'Jan 20, 2024',
     button:'count age',
-    link:'https://agecalculator-frontendmentorchallenge.netlify.app/',
+    viewlink:'https://agecalculator-frontendmentorchallenge.netlify.app/',
+    codelink:'https://github.com/SritharanKalimuthu/FrontendMentor/tree/main'
   }
 ]
 
 const WorkContainer = (workList) =>{
+
+  const workvariant = {
+    initial:{
+      y:100,
+      opacity:0,
+    },
+    animate:{
+      y:0,
+      opacity:1,
+      transition:{
+        duration:.6,
+      }
+    },
+  }
   return <section>
-        <img className="cloud" src="/clouds.svg" alt=""/>
+        {/* <img className="cloud" src="/clouds.svg" alt=""/> */}
         <img src='/mountains.png' alt='' className='mountains'/>
-        <div className="works-container">
+        <motion.div className="works-container" variants={workvariant} initial='initial' whileInView='animate'>
           <div className="works-image">
             <img src={workList.img} alt=''/>
           </div>
-          <div className="works-text-container">
-              <h2>{workList.name}</h2>
-              <span>{workList.date}</span>
-              <p>{workList.desription}</p>
-              {workList.button?<button className='link-preview-btn'><a href={workList.link} target='_blank'>{workList.button}</a></button>:null}
-          </div>
-        </div>
+            <div className="works-text-container">
+                <h2>{workList.name}</h2>
+                <span>{workList.date}</span>
+                <p>{workList.desription}</p>
+                {workList.button?<a href={workList.viewlink} target='_blank'><button className='link-preview-btn'>{workList.button}</button></a>:null}
+                <a href={workList.codelink} target='_blank'><button className="code-btn">View Code</button></a>
+            </div>
+        </motion.div>
   </section>
 }
 

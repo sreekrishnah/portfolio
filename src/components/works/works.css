@@ -12,13 +12,6 @@
     z-index: 0;
 }
 
-.cloud{
-    width:100vw;
-    position: absolute;
-    top: 20rem;
-    filter: opacity(60%);
-    z-index: 0;
-}
 
 .progress{
     margin: 1rem;
@@ -47,44 +40,46 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    backdrop-filter: blur(2px);
+    z-index: 5;
 }
+
 
 .works-text-container{
-    color: #ffff;
     margin-top: 8rem;
     margin-left: 2rem;
+    color: #ffff;
     width: 32rem;
     padding: 2rem;
-    background: rgba(177, 169, 169, 0.226);
-    box-shadow: 4px 4px 10px #0000002f;
+    background: #00000081;
+    box-shadow: 0 0 10px 2px #000000;
     backdrop-filter: blur( 3.5px );
     -webkit-backdrop-filter: blur( 3.5px );
     border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    z-index:3 ;
+    border: 1px solid #00000071;
+    z-index: 3;
 }
 
-.works-image{
+.works-image img{
     margin-top: 8rem;
-    background: rgba(177, 169, 169, 0.226);
-    box-shadow: 4px 4px 10px #0000002f;
+    background: #00000081;
+    box-shadow: 0 0 10px 2px #1d1c1c;
     backdrop-filter: blur( 3.5px );
     -webkit-backdrop-filter: blur( 3.5px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    padding: .5rem;
-    width: 28rem;
+    border-radius: 2rem;
+    border: 1px solid #00000071;
+    width: 30rem;
     z-index: 3;
 }
 
 .works-text-container h2{
     font-size: 2rem;
     font-weight: 700;
-    text-shadow: 3px 3px 5px #000;
+    text-shadow: 3px 3px 5px #5a5959;
 }
 
 .works-text-container span{
-    color:#9c9696 ;
+    color:#706b6b ;
     font-size: .9rem;
     font-weight: 600;
 }
@@ -95,21 +90,38 @@
 }
 
 .link-preview-btn{
-    margin: .5rem 0;
-    padding: .4rem 2rem;
-    border: 2px solid orange;
+    margin: .5rem 2rem .5rem 0;
+    padding: .4rem 1.5rem;
+    border: 2px solid #ffa600;
     border-radius: 1rem;
     background-color: transparent;
-    color: orange;
+    color: #ffa600;
     text-transform: capitalize;
     cursor:pointer;
+    z-index: 3;
 }
 
 .link-preview-btn:hover{
-    background-color: orange;
+    background-color: #ffa600;
     color: #fff;
 }
 
 .link-preview-btn a{
     cursor: pointer;
+}
+
+.code-btn{
+    margin: .5rem 0;
+    padding: .4rem 1.5rem;
+    border: 2px solid #2f00ff;
+    border-radius: 1rem;
+    background-color: transparent;
+    color: #2f00ff;
+    text-transform: capitalize;
+    cursor:pointer;
+}
+
+.code-btn:hover{
+    background-color: #2f00ff;
+    color: #fff;
 }

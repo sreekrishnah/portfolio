@@ -3,49 +3,52 @@
     background:linear-gradient(180deg,#02133a,#62598b);
 }
 
-#Home .forest{
+.forest{
     width:100vw;
     position: absolute;
     bottom: -1.2rem;
-    z-index: 2;
+    z-index: 0;
 }
 
-#Home .clouds{
+.clouds{
     width:100vw;
     position: absolute;
     top: 0rem;
     filter: opacity(80%);
-    z-index: 1;
+    z-index: 0;
 }
 
-#Home .tools{
-    width:25rem;
-    position: absolute;
-    top: 20%;
-    right: 10%;
-    filter: opacity(90%);
-    z-index: 99;
+.hero-container{
+    height: 100vh;
+    position: relative;
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    backdrop-filter: blur(2px);
 }
 
+.hero-text-container{
+    max-width: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    z-index: 3;
+}
 
-#Home h2{
-    position: absolute;
-    top: 27%;
-    left: 15%;
+.hero-text-container h2{
+    padding: 1rem;
     font-family: "League Spartan", sans-serif;
     text-transform: uppercase;
     font-size: 1.7rem;
     font-weight: bold;
     color:  #beaeae;
     text-shadow: 3px 3px 10px #151516;
-    z-index: 99;
 }
 
-#Home h1{
-    width: 30%;
-    position: absolute;
-    top: 37%;
-    left: 15%;
+
+.hero-text-container h1{
+    padding: 1rem;
     font-family: "Timmana", sans-serif;
     text-transform: uppercase;
     font-size: 3rem;
@@ -53,10 +56,9 @@
     color:  #ffff;
     text-shadow: 3px 3px 10px #101011;
     line-height: 3rem;
-    z-index: 99;
 }
 
-#Home h1::after{
+.hero-text-container h1::after{
     display: inline-block;
     content:'';
     margin-left: .5rem;
@@ -64,18 +66,15 @@
     height: 35px;
     background-color:#ffffff;
     animation: blink 1000ms infinite;
-  }
-  
+}
+
 .social-profiles{
-    position: absolute;
-    top: 54%;
-    left: 15%;
-    z-index: 99;
+    padding-left: 1rem;
 }
 
 .social-profiles ion-icon{
-    width: 1.5rem;
-    height: 1.5rem;
+    width: 1.8rem;
+    height: 1.8rem;
     margin-right: 2rem;
     color: #ffff;
     transition: all ease 200ms;
@@ -86,10 +85,9 @@
     cursor: pointer;
 }
 
-#Home button{
-    margin-right: 1rem;
+.hero-btn button{
+    margin:.5rem 1rem;
     padding: 7px 14px;
-    z-index: 99;
     border-radius: .9rem;
     box-shadow: 5px 5px 7px #0000;
     font-family: "League Spartan", sans-serif;
@@ -99,18 +97,12 @@
 
 .contact-btn{
     position: absolute;
-    top: 62%;
-    left: 25%;
-    position: absolute;
     border: 2px solid orange;
     background-color: transparent;
     color: orange;
 }
 
 .know-btn{
-    position: absolute;
-    top: 62%;
-    left: 15%;
     border: 2px solid#ffff;
     background-color: transparent;
     color: #ffff;
@@ -127,37 +119,31 @@
 }
 
 .scroll-btn{
+    margin-top: 1rem;
+    margin-left: 7rem;
     width: 2.5rem;
-    position: absolute;
-    top: 72%;
-    left: 22%;
-    z-index: 99;
 }
 
 .slider-text{
-    z-index: 5;
     width: 50%;
     font-family: "League Spartan", sans-serif;
     font-size: 15rem;
     font-weight: 900;
     position: absolute;
     top: 60%;
-    color: #ffffff09;
+    color: #ffffff05;
     white-space: nowrap;
+    z-index: 1;
 }
 
-  @keyframes blink{
+.tool-image-container{
+    width:25rem;
+    filter: opacity(80%);
+    z-index:3;
+}
+
+@keyframes blink{
     to{
       background:transparent;
     }
   }
-
-@media screen and (max-width:1115px) {
-    #Home h2{
-        top: 24%;
-    }
-    
-    #Home h1{
-        top: 31%;
-    }
-}

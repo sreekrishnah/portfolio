@@ -40,38 +40,38 @@ function About() {
             variants={linevariant} initial='initial' whileInView='animate'></motion.div>
           </div>
           <div className="skill-container">
-            <CircularProgressBar
-            name='main' 
-            percentage={80}
-            pathColor='FB6542'
+
+             <CircularProgressBar
+            percentage={90}
+            pathColor='F0DB4F'
             textSize={20}
-            header='Frontend Development'/>
+            header='JavaScript'/>
 
             <CircularProgressBar
-             name='left' 
             percentage={85}
             pathColor='61DBFB'
             textSize={20}
             header='React JS'/>
 
-             <CircularProgressBar
-             name='left' 
-            percentage={90}
-            pathColor='F0DB4F'
-            textSize={20}
-            header='JavaScript'/>
-             <CircularProgressBar
-             name='left' 
+            <CircularProgressBar
             percentage={70}
             pathColor='306998'
             textSize={20}
             header='python3'/>
+            
             <CircularProgressBar
-             name='left' 
             percentage={60}
             pathColor='484C89'
             textSize={20}
             header='php & c '/>
+
+
+            <CircularProgressBar
+            percentage={50}
+            pathColor='FB6542'
+            textSize={20}
+            header='MERN Stack'/>
+
           </div>
         </div>
       </section>

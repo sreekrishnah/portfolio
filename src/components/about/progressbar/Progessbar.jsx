@@ -37,7 +37,7 @@ function CircularProgressBar(props) {
       variants={boxvariant}
       initial='initial'
       whileInView='animate'>
-      <div className={`${name}progresscircle`}>
+      <div className='progresscircle'>
         <CircularProgressbar value={percentagecount} text={`${percentagecount}%`} styles={{
             path: {
                 // Path color
@@ -67,7 +67,7 @@ function CircularProgressBar(props) {
               },
             }}/>
       </div>
-      <h2 className={`${name}-title`}>{header}</h2>
+      <h2 className='progresscircle-title'>{header}</h2>
     </motion.div>
   );
 }
