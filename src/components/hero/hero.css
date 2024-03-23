@@ -62,7 +62,7 @@
     margin-left: .5rem;
     width:3px;
     height: 35px;
-    background-color:#ffff;
+    background-color:#ffffff;
     animation: blink 1000ms infinite;
   }
   
@@ -102,28 +102,28 @@
     top: 62%;
     left: 25%;
     position: absolute;
-    border: 2px solid#ffff;
+    border: 2px solid orange;
     background-color: transparent;
-    color: #ffff;
+    color: orange;
 }
 
 .know-btn{
     position: absolute;
     top: 62%;
     left: 15%;
-    border: 2px solid#4a00f1;
+    border: 2px solid#ffff;
     background-color: transparent;
-    color: #4a00f1;
+    color: #ffff;
 }
 
 .contact-btn:hover{
-    background-color: #ffff;
-    color: #4a00f1;
+    background-color: orange;
+    color: #fff;
 }
 
 .know-btn:hover{
-    background-color: #4a00f1;
-    color: #ffff;
+    background-color: #ffff;
+    color: #4a00f1;
 }
 
 .scroll-btn{

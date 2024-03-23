@@ -1,4 +1,115 @@
 #Works{
     position: relative;
     background:linear-gradient(180deg,#1f0537,#271770);
+    top: -1rem;
+}
+
+.mountains{
+    width:100vw;
+    position: absolute;
+    bottom: 0;
+    filter: opacity(100%);
+    z-index: 0;
+}
+
+.cloud{
+    width:100vw;
+    position: absolute;
+    top: 20rem;
+    filter: opacity(60%);
+    z-index: 0;
+}
+
+.progress{
+    margin: 1rem;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 4;
+} 
+
+.progress h1{
+    text-align: center;
+    padding-top: 7rem;
+    font-family: "Timmana", sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: orange;
+}
+
+.progress-line-bar{
+    height: 8px;
+    background-color: #ffff;
+}
+
+.works-container{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.works-text-container{
+    color: #ffff;
+    margin-top: 8rem;
+    margin-left: 2rem;
+    width: 32rem;
+    padding: 2rem;
+    background: rgba(177, 169, 169, 0.226);
+    box-shadow: 4px 4px 10px #0000002f;
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    z-index:3 ;
+}
+
+.works-image{
+    margin-top: 8rem;
+    background: rgba(177, 169, 169, 0.226);
+    box-shadow: 4px 4px 10px #0000002f;
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    padding: .5rem;
+    width: 28rem;
+    z-index: 3;
+}
+
+.works-text-container h2{
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 3px 3px 5px #000;
+}
+
+.works-text-container span{
+    color:#9c9696 ;
+    font-size: .9rem;
+    font-weight: 600;
+}
+
+.works-text-container p{
+    padding: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.link-preview-btn{
+    margin: .5rem 0;
+    padding: .4rem 2rem;
+    border: 2px solid orange;
+    border-radius: 1rem;
+    background-color: transparent;
+    color: orange;
+    text-transform: capitalize;
+    cursor:pointer;
+}
+
+.link-preview-btn:hover{
+    background-color: orange;
+    color: #fff;
+}
+
+.link-preview-btn a{
+    cursor: pointer;
 }

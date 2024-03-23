@@ -96,8 +96,8 @@ function AboutPage2() {
             >
             <img src="/aws.png" alt="" className='text-box-thumnail'/>
             <div className="about-text-box"><span>17th Nov 2023</span>
-                <p>"Successfully deployed a virtual Linux machine on <b><a href='#' style={{color:'black'}}>AWS Cloud Management Console</a></b>  utilizing various AWS services."</p><hr></hr><p>
-                <b>Achievement : </b>Leveraged various AWS services for efficient deployment of employee directory application & successfully deployed alongside the virtual machine.
+                <p>"Successfully deployed a virtual Linux machine on cloud using <b><a href='#' style={{color:'black'}}>AWS Cloud Management Console</a></b>  utilizing various AWS services."</p><hr></hr><p>
+                <b>Achievement : </b>Leveraged various AWS services for deploying employee directory application & successfully deployed alongside the virtual machine.
                 </p></div>
             </motion.div>
             <motion.div className="section2-content"

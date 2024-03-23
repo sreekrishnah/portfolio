@@ -1,4 +1,22 @@
 #Contact{
     position: relative;
     background:linear-gradient(180deg,#1f0537,#271770);
+    top: -1rem;
+    
+}
+
+.mount{
+    width:100vw;
+    position: absolute;
+    bottom: 0;
+    filter: opacity(100%);
+    z-index: 0;
+}
+
+.clouds{
+    width:100vw;
+    position: absolute;
+    top:0;
+    filter: opacity(60%);
+    z-index: 1;
 }

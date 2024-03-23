@@ -71,7 +71,6 @@
     padding:7rem 5rem;
     display: grid;
     grid-template-columns: repeat(4,auto);
-    column-gap: 3rem;
 }
 
 .section2-content{
