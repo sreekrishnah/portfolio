@@ -5,11 +5,12 @@ import './contact.css'
 
 function Contact() {
 
-
+  const [name,setName] = useState()
+  const [email,setEmail] = useState()
+  const [message,setMessage] = useState()
   const [formsuccess,setFormsuccess] = useState(false);
   const [formfailure,setFormfailure] = useState(false);
   const [loading,setLoading] = useState(false);
-  const [loadtext,setLoadtext] = useState();
 
   const titlevariant = {
     initial :{
@@ -39,24 +40,10 @@ function Contact() {
     }
   }
 
-  const messagevariant = {
-    initial :{
-      x:200,
-      opacity:0
-    },
-    animate:{
-      x:0,
-      opacity:1,
-      transition:{
-        duration:.4,
-      }
-    }
-  }
 
   const onSubmit = async (event) => {
     event.preventDefault();
     setLoading(true);
-    mailstatus();
     const formData = new FormData(event.target);
 
     formData.append("access_key", "fc87f1a0-30e7-42aa-b375-f0640707b98c");
@@ -75,10 +62,18 @@ function Contact() {
     
     setLoading(false);
 
-    if (res.success) {
-      setFormsuccess(true)
-    }else{
-      setFormfailure(true)
+    try{
+      if (res.success) {
+        setFormsuccess(true)
+      }else{
+        setFormfailure(true)
+      }
+    }catch(error){
+      console.log(error)
+    }finally{
+      setName('');
+      setEmail('');
+      setMessage('');
     }
 
   };
@@ -99,17 +94,13 @@ function Contact() {
     },5000)
   },[formfailure])
 
-  const mailstatus =()=>{
-    setLoadtext('Processing...');
-  }
-
     return (
       <section id="Contact">
         <img className="clouds" src="/clouds.svg" alt=""/>
         <img src='/mount.png' alt='' className='mount'/>
-        <motion.div className="contact-container" variants={messagevariant} initial='initial' animate='animate'>
-          { formsuccess? <p className='mail-message-success'><ion-icon name="checkmark-circle"></ion-icon>Email Send Successfully!</p> : null}
-          { formfailure? <p className='mail-message-failure'><ion-icon name="close-circle"></ion-icon>Error! Try Again Later</p> : null}
+        <motion.div className="contact-container" variants={titlevariant} initial='initial' animate='animate'>
+          { formsuccess? <p className='mail-message mail-message-success'><ion-icon name="checkmark-circle"></ion-icon>Email Send Successfully!</p> : null}
+          { formfailure? <p className='mail-message mail-message-failure'><ion-icon name="close-circle"></ion-icon>Error! Try Again Later</p> : null}
 
           <div className="contact-details">
               <motion.h1 variants={titlevariant} initial='initial' whileInView='animate'>Let's work together</motion.h1>
@@ -127,10 +118,10 @@ function Contact() {
               </motion.div>
           </div>
           <motion.form onSubmit={onSubmit} variants={formvariant} initial='initial' whileInView='animate' className="contact-form">
-              <input type="text" name='name' placeholder='Your Name' required/>
-              <input type='email' name='email' placeholder='Your Email' required/>
-              <textarea rows={8} name='message' placeholder='Your Message' required/>
-              <button type='sumbit'>{loading?loadtext:'send'}</button>
+              <input type="text" name='name' placeholder='Your Name' value={name} required onChange={(e)=>{setName(e.target.value)}}/>
+              <input type='email' name='email' placeholder='Your Email' value={email} required onChange={(e)=>{setEmail(e.target.value)}}/>
+              <textarea rows={8} name='message' placeholder='Your Message' value={message} required onChange={(e)=>{setMessage(e.target.value)}} />
+              <button type='sumbit'>{loading?'processing...':'send'}</button>
           </motion.form>
         </motion.div>
       </section>

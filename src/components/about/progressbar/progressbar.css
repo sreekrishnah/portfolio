@@ -33,3 +33,16 @@
     text-wrap: nowrap;
     text-shadow: 2px 2px 3px #000000;
 }
+
+@media screen and (max-width:375px) {
+    .progressbar-container{
+        top: 0;
+        right: 0;
+    }
+    .progresscircle{
+        width: 4rem;
+    }
+    .progresscircle-title{
+        font-size: .8rem;
+    }
+}

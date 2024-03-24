@@ -44,17 +44,38 @@ nav ul {
 }
 
 
-.navigator:hover,.navigator.active{
-  font-size: 20px;
-  filter: drop-shadow(10px 10px 1px #fff)
+.active {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: orange;
+  text-decoration: 3px underline orange;
+  border-radius: 10px;
 }
 
-/* .navigator:hover::after,
-.navigator.active::after {
-  background-color: #e61638;
-  width: 3rem;
-} */
+
+.navigator:hover{
+  color: orange;
+}
 
 @media screen and (max-width:375px) {
-  
+
+  nav{
+    margin: 0;
+    background: #8686861c;
+    box-shadow: 4px 4px 10px 2px #1b1a1a33;
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border-radius: 0;
+    border: none;
+  }
+
+  nav h1{
+    margin: 1rem;
+    font-size: 2rem;
+  }
+
+  nav ul{
+    display: none;
+  }
+
 }

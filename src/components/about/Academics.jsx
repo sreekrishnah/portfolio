@@ -43,7 +43,7 @@ const Container = (props)=>{
       opacity:1,
       transition:{
         duration:1,
-        delay:1,
+        delay:.6,
       }
     }
   }
@@ -56,7 +56,7 @@ const Container = (props)=>{
       opacity:1,
       transition:{
         duration:.8,
-        delay:2,
+        delay:.7,
       }
     }
   }

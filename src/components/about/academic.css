@@ -90,3 +90,29 @@
         left: -1.7rem;
     }
 }
+
+@media screen and (max-width:375px) {
+
+    .timeline{
+        margin: 6rem 0;
+    }
+
+    .school-container{
+        width: 100%;
+    }
+
+    .text-box{
+        font-size: .8rem;
+
+    }
+
+    .scon2{
+        left: 0;
+    }
+
+    .school-container ion-icon{
+        width: .5rem;
+        height: .5rem;
+        left: -1.5rem;
+    }
+}

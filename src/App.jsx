@@ -1,6 +1,6 @@
-import { useState } from 'react'
 import './App.css'
-import Home from './components/Home'
+import Navbar from './components/navbar/Navbar'
+import Hero from './components/hero/Hero'
 import About from './components/about/About'
 import Works from './components/works/Works'
 import Contact from './components/contact/Contact'
@@ -10,7 +10,8 @@ function App() {
 
   return (
     <>
-      <Home/>
+      <Navbar />
+      <Hero/>
       <About/>
       <AboutPage2/>
       <Works/>

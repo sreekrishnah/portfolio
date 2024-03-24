@@ -50,12 +50,12 @@
     max-width: 20rem;
     margin-bottom: 1rem;
     padding: 1rem;
-    background: #00000050;
+    /* background: #00000050;
     box-shadow: 4px 4px 10px 2px #000000;
     backdrop-filter: blur( 3.5px );
     -webkit-backdrop-filter: blur( 3.5px );
     border-radius: 10px;
-    border: 1px solid #00000071;
+    border: 1px solid #00000071; */
 }
 
 .contact-item h2{
@@ -75,12 +75,12 @@
     align-items: center;
     margin-top: 5rem;
     margin-left: 5rem;
-    background: #00000050;
+    /* background: #00000050;
     box-shadow: 4px 4px 10px 2px #000000;
     backdrop-filter: blur( 3.5px );
     -webkit-backdrop-filter: blur( 3.5px );
     border-radius: 10px;
-    border: 1px solid #00000071;
+    border: 1px solid #00000071; */
     padding: 2rem;
 }
 
@@ -112,7 +112,7 @@
     color: #fff;
 }
 
-.mail-message-success{
+.mail-message{
     position: absolute;
     top: 11.5%;
     right: 2%;
@@ -120,8 +120,13 @@
     display: flex;
     align-items: center;
     background-color: #e2f3e2c0;
-    color: green;
     border-radius: 5px;
+    transform: translateX(100%);
+    animation: moveleft .4s linear forwards;
+}
+
+.mail-message-success{
+    color: green;
     box-shadow: -5px 0 1px green;
 }
 
@@ -132,17 +137,31 @@
     color: green;
 }
 
-.mail-message-failure{
+.mail-message-success::after{
+    content: '';
     position: absolute;
-    top: 11.5%;
-    right: 2%;
-    padding: .5rem 1rem;
-    display: flex;
-    align-items: center;
-    background-color: #f3e2e2c0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: green;
+    animation: line 5s linear forwards;
+}
+
+.mail-message-failure{
     color: red;
-    border-radius: 5px;
     box-shadow: -5px 0 1px red;
+}
+
+.mail-message-failure::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 3px;
+    background: red;
+    animation: line 5s linear forwards;
 }
 
 .mail-message-failure ion-icon{
@@ -150,4 +169,82 @@
     width: 1.4rem;
     height: 1.4rem;
     color: red;
+}
+
+@keyframes moveleft{
+    100%{
+        transform: translateX(0);
+    }
+}
+
+@keyframes line{
+    100%{
+        width: 0;
+    }
+}
+
+@media screen and (max-width:375px) {
+    .contact-container{
+        height: auto;
+        flex-direction: column;
+    }
+
+    .contact-details{
+        width: auto;
+        margin-top: 5rem;
+    }
+    
+    .contact-details h1{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    
+    .contact-item{
+        width: auto;
+        background: none;
+        box-shadow: none;
+        border:none;
+        text-align: center;
+        margin-bottom:0;
+    }
+    
+    .contact-item h2{
+        font-size: 1em;
+        font-weight: 600;
+    }
+    
+    .contact-item a{
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .contact-form{
+        width: auto;
+        margin: 0;
+        margin-top: 1rem;
+        background: none;
+        box-shadow: none;
+        border-radius: none;
+        border:none;
+        padding: 0rem;
+    }
+    
+    .contact-form input, .contact-form textarea{
+        width: 140%;
+    }
+    
+    .mail-message{
+        position: absolute;
+        top: 47%;
+        right: 2%;
+        font-size: .75rem;
+        padding: .3rem .5rem;
+        z-index: 5;
+    }
+    
+    .mail-message-success ion-icon,.mail-message-failure ion-icon{
+        margin-right: .5rem;
+        width: 1rem;
+        height: 1rem;
+    }
 }
