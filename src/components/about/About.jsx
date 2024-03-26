@@ -2,7 +2,6 @@ import {animate, motion ,useScroll , useTransform} from 'framer-motion';
 import './about.css';
 import School from './Academics';
 import CircularProgressBar from './progressbar/Progessbar';
-import { useRef } from 'react';
 
 function About() {
 
