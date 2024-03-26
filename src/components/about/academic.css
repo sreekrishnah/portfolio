@@ -20,7 +20,7 @@
     border: 1px solid rgba( 255, 255, 255, 0.18 );
     padding: 20px 20px;
     border-radius: 6px;
-    font-size: 1rem;
+    font-size: .9rem;
     box-shadow: 7px 7px #5266ce;
 }
 
@@ -62,7 +62,7 @@
     
     .text-box{
         padding: 15px;
-        font-size: .95rem;
+        font-size: .9rem;
     }
     
     .year{

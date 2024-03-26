@@ -29,11 +29,11 @@ body{
 section{
     height: 100vh;
     scroll-snap-align: center;
+    line-height: 1.5rem;
 }
 
-a:visited,a:hover{
+a:visited{
     text-decoration: none;
-    color: inherit;
 }
 
 li{
