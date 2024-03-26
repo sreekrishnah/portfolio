@@ -47,8 +47,17 @@ li{
 
 @media all and (min-width:321px) and (max-width: 480px){
 
+    html{
+        scroll-snap-type:none;
+        scroll-behavior: smooth;
+    }
+
+    body{
+        width: 100vw;
+    }
+
     section{
-        height: auto;
+        height: 100vh;
         scroll-snap-align: none;
     }
 }
