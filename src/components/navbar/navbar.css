@@ -29,7 +29,6 @@ nav h1 {
 
 nav a:visited,nav a:hover{
   text-decoration: none;
-  color: #fff;
 }
 
 nav ul {
@@ -75,7 +74,7 @@ nav li{
   overflow: hidden;
 }
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:400px) {
 
   nav{
     margin: 0;

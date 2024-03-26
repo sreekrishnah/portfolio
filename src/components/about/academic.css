@@ -91,7 +91,7 @@
     }
 }
 
-@media screen and (max-width:375px) {
+@media screen and (max-width:400px) {
 
     .timeline{
         margin: 6rem 0;
