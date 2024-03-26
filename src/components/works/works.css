@@ -127,7 +127,7 @@
     color: #fff;
 }
 
-@media screen and (max-width:375px) {
+@media all and (min-width:321px) and (max-width: 480px) {
     .progress h1{
         font-size: 1.5rem;
         padding-top: 5rem;

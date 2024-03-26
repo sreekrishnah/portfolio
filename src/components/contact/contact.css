@@ -202,7 +202,7 @@
     }
 }
 
-@media screen and (max-width:375px) {
+@media all and (min-width:321px) and (max-width: 480px) {
     .contact-container{
         height: auto;
         flex-direction: column;
@@ -251,7 +251,6 @@
     .contact-form input, .contact-btn-container, .contact-form textarea{
         width: 140%;
     }
-
     
     .mail-message{
         position: absolute;

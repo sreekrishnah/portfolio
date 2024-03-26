@@ -16,6 +16,7 @@ html{
     padding: 0;
     box-sizing: border-box;
     cursor: default;
+    font-family: "League Spartan", sans-serif;
 }
 
 body{
@@ -23,17 +24,26 @@ body{
     color: #262527;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    font-family: "League Spartan", sans-serif;
 }
 
 section{
     height: 100vh;
     scroll-snap-align: center;
+    line-height: 1.5rem;
 }
 
-@media screen and (max-width:375px){
+a:visited{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+}
+
+@media all and (min-width:321px) and (max-width: 480px){
 
     section{
         height: auto;
+        scroll-snap-align: none;
     }
 }
