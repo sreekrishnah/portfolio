@@ -8,7 +8,7 @@ function Contact() {
   const [name,setName] = useState('')
   const [email,setEmail] = useState('')
   const [message,setMessage] = useState('')
-  const [formsuccess,setFormsuccess] = useState(true);
+  const [formsuccess,setFormsuccess] = useState(false);
   const [formfailure,setFormfailure] = useState(false);
   const [loading,setLoading] = useState(false);
 
@@ -87,7 +87,7 @@ function Contact() {
   useEffect(()=>{
     setTimeout(()=>{
 
-      // setFormsuccess(false);
+      setFormsuccess(false);
       
     },5000)
   },[formsuccess])
