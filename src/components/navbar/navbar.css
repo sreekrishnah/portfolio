@@ -14,7 +14,7 @@ nav {
 
 nav h1 {
   text-transform: uppercase;
-  padding: 1.5rem;
+  padding: 1.3rem;
   font-size: 3rem;
   font-weight: 900;
   cursor: pointer;
@@ -31,6 +31,10 @@ nav ul {
   display: flex;
   padding: 1rem;
   font-family: "League Spartan", sans-serif;
+}
+
+nav li{
+  margin: .7rem 0;
 }
 
 .navigator{
@@ -61,6 +65,10 @@ nav ul {
   display: none;
 }
 
+.block-scroll{
+  overflow: hidden;
+}
+
 @media screen and (max-width:375px) {
 
   nav{
@@ -75,6 +83,7 @@ nav ul {
 
   nav h1{
     margin: 1rem;
+    padding: 1rem;
     font-size: 2rem;
   }
 
@@ -96,18 +105,25 @@ nav ul {
   }
   
   .toggle-btn{
-    margin: 2rem;
+    margin: 1.8rem 2rem 0;
     display: block;
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;
+    height: 1.5rem;
   }
 
   .sidebar{
-    height: 100vh;
-    background: #1f1d1dea;
+    height: 0;
+    background: #000000c0;
     box-shadow: 4px 4px 10px 2px #1b1a1a33;
-    backdrop-filter: blur( 3.5px );
-    -webkit-backdrop-filter: blur( 3.5px );
+    backdrop-filter: blur( 5.5px );
+    -webkit-backdrop-filter: blur( 5.5px );
+    animation: flow-down 700ms forwards;
   }
 
+}
+
+@keyframes flow-down {
+  100%{
+    height: 100vh;
+  }
 }

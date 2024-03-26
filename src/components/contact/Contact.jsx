@@ -5,9 +5,9 @@ import './contact.css'
 
 function Contact() {
 
-  const [name,setName] = useState()
-  const [email,setEmail] = useState()
-  const [message,setMessage] = useState()
+  const [name,setName] = useState('')
+  const [email,setEmail] = useState('')
+  const [message,setMessage] = useState('')
   const [formsuccess,setFormsuccess] = useState(false);
   const [formfailure,setFormfailure] = useState(false);
   const [loading,setLoading] = useState(false);
@@ -73,12 +73,16 @@ function Contact() {
       setLoading(false)
       setFormfailure(true)
     }finally{
-      setName('');
-      setEmail('');
-      setMessage('');
+      formclear();
     }
 
   };
+
+  const formclear=()=>{
+      setName('');
+      setEmail('');
+      setMessage('');
+  }
 
   useEffect(()=>{
     setTimeout(()=>{
@@ -123,7 +127,10 @@ function Contact() {
               <input type="text" name='name' placeholder='Your Name' value={name} required onChange={(e)=>{setName(e.target.value)}}/>
               <input type='email' name='email' placeholder='Your Email' value={email} required onChange={(e)=>{setEmail(e.target.value)}}/>
               <textarea rows={8} name='message' placeholder='Your Message' value={message} required onChange={(e)=>{setMessage(e.target.value)}} />
-              <button type='sumbit'>{loading?'processing...':'send'}</button>
+              <div className="contact-btn-container">
+              <button type='sumbit' className='send-btn'>{loading?'processing...':'send'}</button>
+              <button className='clear-btn' onClick={()=>formclear()}>Clear All</button>
+              </div>
           </motion.form>
         </motion.div>
       </section>

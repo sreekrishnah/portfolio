@@ -95,20 +95,39 @@
     cursor:pointer;
 }
 
-.contact-form button{
+.contact-btn-container{
+    display: flex;
     width: 100%;
+    justify-content: space-between;
+}
+
+.contact-btn-container button{
+    width: 45%;
     margin: 1rem 0;
     padding: .4rem 1.5rem;
-    border: 2px solid orange;
     border-radius: 3px;
     background-color: transparent;
-    color: orange;
     text-transform: capitalize;
     cursor:pointer;
 }
 
-.contact-form button:hover{
+.send-btn{
+    border: 2px solid orange;
+    color: orange;
+}
+
+.send-btn:hover{
     background-color: orange;
+    color: #fff;
+}
+
+.clear-btn{
+    border: 2px solid red;
+    color: red;
+}
+
+.clear-btn:hover{
+    background-color: red;
     color: #fff;
 }
 
@@ -230,6 +249,10 @@
     }
     
     .contact-form input, .contact-form textarea{
+        width: 140%;
+    }
+
+    .contact-btn-container{
         width: 140%;
     }
     
