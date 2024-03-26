@@ -29,6 +29,7 @@ nav h1 {
 
 nav a:visited, nav a:link{
   text-decoration: none;
+  color: inherit;
 }
 
 
