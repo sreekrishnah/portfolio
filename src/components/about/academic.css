@@ -102,6 +102,10 @@
         width: 100%;
     }
 
+    .school-container h1, .school-container h2{
+        font-size: .9rem;
+    }
+
     .text-box{
         font-size: .8rem;
 
