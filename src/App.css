@@ -40,7 +40,7 @@ li{
     list-style: none;
 }
 
-@media screen and (max-width:400px){
+@media all and (min-width:321px) and (max-width: 480px){
 
     section{
         height: auto;
