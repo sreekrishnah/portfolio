@@ -74,7 +74,7 @@ nav li{
   overflow: hidden;
 }
 
-@media(max-width:400px) {
+@media screen and (max-width:400px) {
 
   nav{
     margin: 0;

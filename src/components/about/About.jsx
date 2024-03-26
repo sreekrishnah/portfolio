@@ -3,6 +3,7 @@ import './about.css';
 import School from './Academics';
 import CircularProgressBar from './progressbar/Progessbar';
 
+
 function About() {
 
   const linevariant = {
