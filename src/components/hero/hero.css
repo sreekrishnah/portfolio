@@ -193,6 +193,7 @@
     }
 
     .slider-text{
-        font-size: 10rem;
+        width: 0;
+        display: none;
     }
 }

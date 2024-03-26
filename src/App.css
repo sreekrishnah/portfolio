@@ -53,7 +53,8 @@ li{
     }
 
     body{
-        width: 100vw;
+        width: auto;
+        overflow-x: hidden;
     }
 
     section{

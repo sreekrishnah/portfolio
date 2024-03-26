@@ -8,7 +8,7 @@ function CircularProgressBar(props) {
 
   const boxvariant = {
     initial:{
-      x:200,
+      x:30,
       opacity:0,
     },
     animate:{
