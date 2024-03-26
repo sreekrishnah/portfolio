@@ -19,7 +19,7 @@ html{
 }
 
 body{
-    background-color: #ddd1c7;
+    background:linear-gradient(180deg,#02133a,#62598b);
     color: #262527;
     overflow-x: hidden;
     scroll-behavior: smooth;

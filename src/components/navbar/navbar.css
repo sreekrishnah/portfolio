@@ -57,6 +57,10 @@ nav ul {
   color: orange;
 }
 
+.toggle-btn{
+  display: none;
+}
+
 @media screen and (max-width:375px) {
 
   nav{
@@ -76,6 +80,34 @@ nav ul {
 
   nav ul{
     display: none;
+  }
+
+  .menubar{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    top: 20%;
+    left: 5%;
+  }
+
+  svg{
+    cursor: pointer;
+  }
+  
+  .toggle-btn{
+    margin: 2rem;
+    display: block;
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .sidebar{
+    height: 100vh;
+    background: #1f1d1dea;
+    box-shadow: 4px 4px 10px 2px #1b1a1a33;
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
   }
 
 }

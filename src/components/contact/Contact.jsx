@@ -70,6 +70,8 @@ function Contact() {
       }
     }catch(error){
       console.log(error)
+      setLoading(false)
+      setFormfailure(true)
     }finally{
       setName('');
       setEmail('');
