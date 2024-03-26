@@ -31,7 +31,7 @@ section{
     scroll-snap-align: center;
 }
 
-@media screen and (max-width:400px){
+@media (max-width:400px){
 
     section{
         height: auto;
