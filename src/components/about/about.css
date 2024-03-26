@@ -146,9 +146,10 @@
     }
 
     .academic-container .vl{
+        top: 7%;
         left: 2.2rem;
         width: 5px;
-        height: 80vh;
+        height: 75vh;
     }
     .about-section-2{
         padding: 5rem 2rem;

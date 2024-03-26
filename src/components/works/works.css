@@ -129,6 +129,8 @@
 
 @media all and (min-width:321px) and (max-width: 480px) {
     .progress h1{
+        position: sticky;
+        top: 10%;
         font-size: 1.5rem;
         padding-top: 5rem;
     }
@@ -180,7 +182,7 @@
 
     .link-preview-btn,.code-btn{
         margin: 0 1rem 0 0;
-        padding: .3rem .5rem;
-        font-size: .7rem;
+        padding: .6rem .9rem;
+        font-size: .8rem;
     }
 }
