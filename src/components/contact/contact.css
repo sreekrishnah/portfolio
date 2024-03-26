@@ -248,11 +248,7 @@
         padding: 0rem;
     }
     
-    .contact-form input, .contact-form textarea{
-        width: 140%;
-    }
-
-    .contact-btn-container{
+    .contact-form input, .contact-btn-container, .contact-form textarea{
         width: 140%;
     }
     
