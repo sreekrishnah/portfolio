@@ -3,7 +3,6 @@ import './about.css';
 import School from './Academics';
 import CircularProgressBar from './progressbar/Progessbar';
 import { useRef } from 'react';
-import { Progress } from 'flowbite-react';
 
 function About() {
 
