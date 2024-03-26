@@ -77,6 +77,11 @@ nav li{
   overflow: hidden;
 }
 
+svg{
+  background: none;
+  cursor: pointer;
+}
+
 @media all and (min-width:321px) and (max-width: 480px) {
 
   nav{
@@ -107,11 +112,6 @@ nav li{
     position: relative;
     top: 20%;
     left: 8%;
-  }
-
-  svg{
-    background: transparent;
-    cursor: pointer;
   }
   
   .toggle-btn{
