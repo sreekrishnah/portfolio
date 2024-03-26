@@ -156,6 +156,10 @@
 
   @media screen and (max-width:400px) {
 
+    .forest{
+        bottom:-1rem;
+    }
+
     .tool-image-container{
         display: none;
     }

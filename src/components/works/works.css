@@ -144,7 +144,11 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 2rem;
+        padding:0rem 2.5rem;
+    }
+
+    .works-container:last-child{
+        padding-bottom: 5rem;
     }
 
     .works-image img{
