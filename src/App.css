@@ -20,7 +20,7 @@ html{
 }
 
 body{
-    background:linear-gradient(180deg,#02133a,#62598b);
+    background:#02133a;
     color: #262527;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -57,7 +57,7 @@ li{
     }
 
     section{
-        height: 100vh;
+        height: auto;
         scroll-snap-align: none;
     }
 }
