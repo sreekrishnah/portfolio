@@ -87,7 +87,7 @@ svg{
   cursor: pointer;
 }
 
-@media all and (min-width:321px) and (max-width: 480px) {
+@media screen and (max-width:400px) {
 
   nav{
     position: fixed;

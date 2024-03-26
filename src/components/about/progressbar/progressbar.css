@@ -34,7 +34,7 @@
     text-shadow: 2px 2px 3px #000000;
 }
 
-@media all and (min-width:321px) and (max-width: 480px) {
+@media screen and (max-width:400px)  {
     .progressbar-container{
         top: 0;
         right: 0;

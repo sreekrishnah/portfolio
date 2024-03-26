@@ -92,7 +92,7 @@
     }
 }
 
-@media all and (min-width:321px) and (max-width: 480px){
+@media screen and (max-width:400px) {
 
     .timeline{
         margin: 6rem 0;
