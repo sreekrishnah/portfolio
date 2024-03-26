@@ -77,6 +77,11 @@ nav li{
   overflow: hidden;
 }
 
+.toggle-btn{
+  background: none;
+  border: none;
+}
+
 svg{
   background: none;
   cursor: pointer;
