@@ -79,6 +79,7 @@ nav li{
 @media all and (min-width:321px) and (max-width: 480px) {
 
   nav{
+    width: 100%;
     margin: 0;
     background: #8686861c;
     box-shadow: 4px 4px 10px 2px #1b1a1a33;
@@ -102,12 +103,11 @@ nav li{
     display: flex;
     flex-direction: column;
     text-align: center;
-    position: relative;
-    top: 20%;
-    left: 5%;
+    margin: 10rem 0 2rem 0;
   }
 
   svg{
+    background: transparent;
     cursor: pointer;
   }
   
