@@ -29,7 +29,7 @@ nav h1 {
 
 nav a:visited,nav a:hover{
   text-decoration: none;
-  color: inherit;
+  color: #fff;
 }
 
 nav ul {
@@ -54,7 +54,7 @@ nav li{
 }
 
 
-.active {
+.active{
   font-size: 1.2rem;
   font-weight: 600;
   color: orange;
