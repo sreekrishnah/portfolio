@@ -18,12 +18,12 @@ nav {
 }
 
 nav h1 {
-  text-transform: uppercase;
+  text-transform: capitalize;
   padding: 1.3rem;
-  font-size: 3rem;
+  font-size: 1.8rem;
   font-weight: 900;
   cursor: pointer;
-  margin-left: 4rem;
+  margin: .5rem 2rem;
   font-family: "Timmana", sans-serif;
   background-color: orange;
   width: 2.5rem;
@@ -36,7 +36,7 @@ nav h1 {
 nav ul {
   list-style: none;
   display: flex;
-  padding: 1rem;
+  padding: .5rem;
   font-family: "League Spartan", sans-serif;
 }
 
@@ -47,7 +47,7 @@ nav li{
 
 .navigator{
   margin-right: 2rem;
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   text-transform: capitalize;
   font-size: 17px;
   font-weight: 500;

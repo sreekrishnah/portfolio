@@ -38,20 +38,21 @@ function Navbar() {
   return (
     <nav className={open ? "sidebar" : null}>
       <motion.h1>
-        <a href="#Home">sk</a>
+        <a href="#Home">KS</a>
       </motion.h1>
       <motion.ul className={open ? "menubar" : ""}>
         {["Home", "About", "Works", "Contact"].map((value, index) => (
-          <li key={index} onClick={() => setOpen((prev) => !prev)}>
             <motion.a
               href={`#${value}`}
               className={
                 activeSection === value ? "current-page navigator" : "navigator"
               }
+              onClick={open?() => setOpen((prev) => !prev):null}
+              key={index}
             >
               {value}
             </motion.a>
-          </li>
+          
         ))}
       </motion.ul>
       <motion.button
