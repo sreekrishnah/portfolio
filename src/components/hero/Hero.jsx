@@ -95,7 +95,7 @@ function Hero() {
                   <motion.h2 
                   variants={textvariant2}
                   initial='initial'
-                  whileInView='animate'>Hello, I'm sritharan kalimuthu</motion.h2>
+                  whileInView='animate'>Hello, I'm sritharan kalimuthu,</motion.h2>
                   <motion.h1 
                   variants={textvariant1}
                   initial='initial'

@@ -2,7 +2,6 @@
 nav {
   padding: 0.5rem;
   display: flex;
-  justify-content: space-between;
   z-index: 99;
   position: fixed;
   top: 0;
@@ -34,6 +33,7 @@ nav h1 {
 
 
 nav ul {
+  margin-left: 25%;
   list-style: none;
   display: flex;
   padding: .5rem;
@@ -90,16 +90,8 @@ svg{
 @media screen and (max-width:400px) {
 
   nav{
-    position: fixed;
-    top: 0;
     width: 100vw;
-    margin: 0;
-    background: #8686861c;
-    box-shadow: 4px 4px 10px 2px #1b1a1a33;
-    backdrop-filter: blur( 3.5px );
-    -webkit-backdrop-filter: blur( 3.5px );
-    border-radius: 0;
-    border: none;
+    justify-content: space-between;
   }
 
   nav h1{
@@ -110,6 +102,7 @@ svg{
 
   nav ul{
     display: none;
+    margin: 0;
   }
 
   .menubar{

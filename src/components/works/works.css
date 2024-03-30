@@ -76,7 +76,7 @@
 .works-text-container h2{
     font-size: 2rem;
     font-weight: 700;
-    text-shadow: 3px 3px 5px #5a5959;
+    text-shadow: 3px 3px 5px #000000;
 }
 
 .works-text-container span{

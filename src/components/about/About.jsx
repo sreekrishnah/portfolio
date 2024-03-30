@@ -62,7 +62,7 @@ function About() {
             percentage={60}
             pathColor='484C89'
             textSize={20}
-            header='php & c '/>
+            header='c'/>
 
 
             <CircularProgressBar
