@@ -46,7 +46,7 @@ function Navbar() {
             <motion.a
               href={`#${value}`}
               className={
-                activeSection === value ? "active navigator" : "navigator"
+                activeSection === value ? "current-page navigator" : "navigator"
               }
             >
               {value}

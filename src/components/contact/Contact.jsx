@@ -111,16 +111,15 @@ function Contact() {
           <div className="contact-details">
               <motion.h1 variants={titlevariant} initial='initial' whileInView='animate'>Let's work together</motion.h1>
               <motion.div variants={titlevariant} initial='initial' whileInView='animate' className="contact-item">
+                <p>Feel free to contact us for collaboration opportunities or freelance work. We're open to exciting projects and look forward to hearing from you!</p>
+              </motion.div>
+              <motion.div variants={titlevariant} initial='initial' whileInView='animate' className="contact-item">
                 <h2>Mail me</h2>
                 <a href='mailto:sritharkalimuthu@gmail.com'>sritharkalimuthu@gmail.com</a>
               </motion.div>
               <motion.div variants={titlevariant} initial='initial' whileInView='animate' className="contact-item">
                 <h2>Call me</h2>
                 <a href='tel:+919786348620'>+91 9786348620</a>
-              </motion.div>
-              <motion.div variants={titlevariant} initial='initial' whileInView='animate' className="contact-item">
-                <h2>Address</h2>
-                <p>36/10 , 4th Street, L.N.Puram, Aranthangi, Pudukkottai - 614616</p>
               </motion.div>
           </div>
           <motion.form onSubmit={onSubmit} variants={formvariant} initial='initial' whileInView='animate' className="contact-form">

@@ -95,11 +95,18 @@ function Hero() {
                   <motion.h2 
                   variants={textvariant2}
                   initial='initial'
-                  whileInView='animate'>I'm , sritharan kalimuthu</motion.h2>
+                  whileInView='animate'>Hello, I'm sritharan kalimuthu</motion.h2>
                   <motion.h1 
                   variants={textvariant1}
                   initial='initial'
-                  whileInView='animate'>Web developer and web designer...</motion.h1>
+                  whileInView='animate'>Front-end developer and web designer...</motion.h1>
+                  <motion.div
+                  className="hero-description" 
+                  variants={textvariant3}
+                  initial='initial'
+                  whileInView='animate'>
+                    <b><i><span>Specializing in JavaScript, React, and MERN Stack.</span></i></b><p>Excel at crafting dynamic and engaging web applications with expertise in component architecture and state management, I am dedicated to delivering seamless experiences. From design to implementation, React is my passion and playground.</p>
+                  </motion.div>
                   <motion.div className="social-profiles" 
                   variants={textvariant3}
                   initial='initial'

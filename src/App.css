@@ -37,7 +37,7 @@ a{
 }
 
 a:visited,a:link{
-    color: inherit;
+    color: #fff;
     text-decoration: none;
 }
 

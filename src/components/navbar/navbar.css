@@ -1,6 +1,6 @@
 
 nav {
-  margin: .5rem;
+  padding: 0.5rem;
   display: flex;
   justify-content: space-between;
   z-index: 99;
@@ -9,7 +9,12 @@ nav {
   width: 100%;
   color: #ffff;
   text-shadow: 2px 2px 7px #000000;
-  background:transparent;
+  background: #8686861c;
+  box-shadow: 4px 4px 10px 2px #1b1a1a33;
+  backdrop-filter: blur( 3.5px );
+  -webkit-backdrop-filter: blur( 3.5px );
+  border-radius: 0;
+  border: none;
 }
 
 nav h1 {
@@ -25,11 +30,6 @@ nav h1 {
   height: 2.5rem;
   text-align: center;
   border-radius: 50%;
-}
-
-nav a:visited, nav a:link{
-  text-decoration: none;
-  color: inherit;
 }
 
 
@@ -56,10 +56,10 @@ nav li{
 }
 
 
-.active{
+.current-page,.current-page:visited,.current-page:link{
   font-size: 1.2rem;
   font-weight: 600;
-  color: orange;
+  color: #ffa600;
   text-decoration: 3px underline orange;
   border-radius: 10px;
 }
