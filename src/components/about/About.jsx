@@ -33,7 +33,7 @@ function About() {
         <img className="clouds" src="/clouds.svg" alt=""/>
         <img src='/mountain.png' alt='' className='mountain'/>
         <div className="about-container">
-          <div className="academic-container">
+          {/* <div className="academic-container">
             <School/>
             <motion.div className="vl" 
             variants={linevariant} initial='initial' whileInView='animate'></motion.div>
@@ -71,7 +71,22 @@ function About() {
             textSize={20}
             header='MERN Stack'/>
 
+          </div> */}
+          <div className="do-container">
+            <div className="title-card">
+                <h1>What I Do..?</h1>
+                <ul>
+                  <li>Discover</li>
+                  <li>Design</li>
+                  <li>Develop</li>
+                </ul>
+            </div>
+            <div className="do-description">
+                <p>I'm so called Levy, on a mission to turn challenges into opportunities. With a keen eye for design and a love for clean code, I specialize in crafting engaging and user-friendly web experiences.</p>
+                <span>"Coding is not about typing, it's about thinking."</span>
+            </div>
           </div>
+          
         </div>
       </section>
     )

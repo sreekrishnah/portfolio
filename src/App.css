@@ -20,7 +20,6 @@ html{
 }
 
 body{
-    background:#02133a;
     color: #262527;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -45,11 +44,26 @@ li{
     list-style: none;
 }
 
+.construction-div{
+    position: absolute;
+    height: 110vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99;
+    background-color: #4f4f4f;
+    backdrop-filter: blur(20px);
+}
+
+.construction-div img {
+    width: 40rem;
+}
+
 @media screen and (max-width:400px) {
 
     html{
         scroll-snap-type:none;
-        scroll-behavior: smooth;
     }
 
     body{
@@ -60,5 +74,10 @@ li{
     section{
         height: auto;
         scroll-snap-align: none;
+    }
+
+
+    .construction-div img{
+        width: 22rem;
     }
 }

@@ -21,14 +21,16 @@
 
 .about-container{
     position: relative;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(2,auto);
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     z-index: 3;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(8px);
+    color: #fff;
 }
 
-.academic-container{
+/* .academic-container{
     margin-left: 2rem;
     color: #0000;
     width: 80%;
@@ -47,6 +49,52 @@
 
 .skill-container{
  background:none;
+} */
+
+.do-container{
+    margin-top: 5rem;
+    padding: 2rem;
+    width: 60vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-card{
+    padding: 2rem;
+    width: 15rem;
+}
+.title-card h1{
+    text-align: center;
+    font-size: 4rem;
+    line-height: 3.5rem;
+    font-weight: 900;
+    background: -webkit-linear-gradient(#d1a8ee, #8070db);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.title-card ul{
+    list-style: none;
+    width: 12rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title-card li{
+    margin-top: 1rem;
+    font-size: 17px;
+    font-weight: 600;
+    color:thistle;
+}
+
+.do-container p{
+    padding: 2rem;
+    margin-top: 2rem;
+    font-size: 17.5px;
+}
+
+.do-container span{
+    padding: 2rem;
+    font-size: 17px;
 }
 
 .about-section-2{

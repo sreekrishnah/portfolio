@@ -38,6 +38,7 @@
 }
 
 .hero-text-container h2{
+    margin-bottom: .8rem;
     padding: 1rem;
     font-family: "League Spartan", sans-serif;
     text-transform: uppercase;
@@ -56,7 +57,7 @@
     font-weight: bold;
     color:  #ffff;
     text-shadow: 3px 3px 10px #101011;
-    line-height: 3rem;
+    margin-bottom: .8rem;
 }
 
 .hero-text-container h1::after{
@@ -151,15 +152,40 @@
     z-index: -1;
 }
 
-.tool-image-container{
+.cyber-image-container{
     width: 20rem;
     filter: opacity(80%);
-    z-index:3;
 }
 
-.tool-image-container img{
+.cyber-image-container img{
+    z-index: 4;
     width: 20rem;
+    border: 5px solid #ffffff23;
+    float: left;
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    background-image: url(/cybercoder.jpeg);
+    animation: morph 8s ease-in-out infinite;
 }
+
+/* .stroke1{
+    margin:1rem 3rem 0;
+    background-color: #ffffff;
+    width: 24rem;
+    height: .8rem;
+}
+.stroke2{
+    margin:1rem 1rem 0;
+    background-color: #ffffff;
+    width: 24rem;
+    height: .8rem;
+}
+
+.stroke3{
+    margin:1rem -1rem 0;
+    background-color: #ffffff;
+    width: 24rem;
+    height: .8rem;
+} */
 
 @keyframes blink{
     to{
@@ -173,44 +199,86 @@
         bottom:-1rem;
     }
 
-    .tool-image-container{
-        display: none;
+    .hero-container{
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .cyber-image-container{
+        margin-top: 2.5rem;
+        width: auto;
+    }
+
+    .cyber-image-container img{
+        margin: 0;
+        padding: 0;
+        width: 10rem;
+        float: none;
     }
 
     .hero-text-container{
-        margin: 1.5rem;
+        margin: 0 .8rem;
         /* text-align: center; */
     }
 
     .hero-text-container h1{
         max-width: 100%;
-        font-size: 2rem;
+        font-size: 1.2rem;
+        margin: 0;
+    }
+
+    .hero-text-container h1::after{
+        height: 15px;
     }
 
     .hero-text-container h2{
-        margin-top: 4rem;
+        margin: 0;
         font-size: 1.2rem;
     }
 
+    .hero-description span{
+        font-size: .9rem;
+        margin: 0;
+    }
+
+    .hero-description p{
+        font-size: .85rem;
+        margin: 0;
+    }
+
     .social-profiles ion-icon{
-        width: 1.2rem;
-        height: 1.2rem;
+        width: 1.3rem;
+        height: 1.3rem;
     }
 
     .hero-btn button{
-        padding: .4rem .6rem;
-        margin: 1rem .4rem .5rem;
+        padding: .5rem .8rem;
+        margin: .8rem 1rem;
         font-size: .8rem;
     }
 
     .scroll-btn{
         width: 1.5rem;
         margin: 0;
-        margin-left: 5rem;
+        margin-left: 6.5rem;
     }
 
     .slider-text{
         width: 0;
         display: none;
     }
+}
+
+@keyframes morph {
+    0%{
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50%{
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100%{
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    
 }

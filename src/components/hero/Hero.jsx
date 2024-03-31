@@ -5,7 +5,7 @@ function Hero() {
 
   const boxvariant = {
     initial:{
-      x:200,
+      x:70,
       opacity:0,
     },
     animate:{
@@ -16,6 +16,21 @@ function Hero() {
       }
     }
   }
+
+  // const boxvariant1 = {
+  //   initial:{
+  //     x:200,
+  //     opacity:0,
+  //   },
+  //   animate:{
+  //     x:0,
+  //     opacity:1,
+  //     transition:{
+  //       duration:.9,
+  //       delay:.2,
+  //     }
+  //   }
+  // }
 
   const textvariant1 = {
     initial:{
@@ -105,7 +120,7 @@ function Hero() {
                   variants={textvariant3}
                   initial='initial'
                   whileInView='animate'>
-                    <b><i><span>Specializing in JavaScript, React, and MERN Stack.</span></i></b><p>Excel at crafting dynamic and engaging web applications with expertise in component architecture and state management, I am dedicated to delivering seamless experiences. From design to implementation, React is my passion and playground.</p>
+                    <b><i><span>Specializing in JavaScript, React, and MERN Stack.</span></i></b><p>From design to implementation, React is my passion and playground. Excel & dedicated to craft and deliver dynamic and engaging web applications with expertise in component architecture and state management.</p>
                   </motion.div>
                   <motion.div className="social-profiles" 
                   variants={textvariant3}
@@ -137,11 +152,19 @@ function Hero() {
                   Tech-enthusiast
                   </motion.div>
               </div>
-            <div className="tool-image-container">
-              <motion.img className="tools"  src="/tools.png" alt="" 
+            <div className="cyber-image-container">
+              <motion.img className="tools"  src="/cybercoder.jpeg" alt="" 
               variants={boxvariant}
               initial='initial'
               whileInView='animate'/>
+              {/* <motion.div className="stroke-container"
+              variants={boxvariant1}
+              initial='initial'
+              whileInView='animate'>
+              <div className="stroke1"></div>
+              <div className="stroke2"></div>
+              <div className="stroke3"></div>
+              </motion.div> */}
             </div>
         </div>
     </section>

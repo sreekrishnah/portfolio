@@ -95,9 +95,9 @@ svg{
   }
 
   nav h1{
-    margin: 1rem;
+    margin: .5rem;
     padding: 1rem;
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 
   nav ul{
@@ -115,7 +115,7 @@ svg{
   }
   
   .toggle-btn{
-    margin: 1.8rem 2rem 0;
+    margin: 1.5rem 1rem 0;
     display: block;
     width: 1.5rem;
     height: 1.5rem;
