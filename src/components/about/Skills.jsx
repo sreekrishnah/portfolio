@@ -80,7 +80,7 @@ function Skills() {
       variants={boxvariant}
       initial='initial'
       whileInView='animate'>
-      <Slider {...width>375?{...settings}:{...settings2}}>
+      <Slider {...width>400?{...settings}:{...settings2}}>
         <div>
         <div className="exp-container">
               <div className='skill-title-card'>
