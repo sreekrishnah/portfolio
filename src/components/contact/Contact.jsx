@@ -111,7 +111,7 @@ function Contact() {
           <div className="contact-details">
               <motion.h1 variants={titlevariant} initial='initial' whileInView='animate'>Let's work together</motion.h1>
               <motion.div variants={titlevariant} initial='initial' whileInView='animate' className="contact-item">
-                <p>Feel free to contact us for collaboration opportunities or freelance work. We're open to exciting projects and look forward to hearing from you!</p>
+                <p>Feel free to reach out for collaboration opportunities or freelance work. I am open to exciting projects and look forward to hearing from you!</p>
               </motion.div>
               <motion.div variants={titlevariant} initial='initial' whileInView='animate' className="contact-item">
                 <h2>Mail me</h2>
@@ -127,8 +127,8 @@ function Contact() {
               <input type='email' name='email' placeholder='Your Email' value={email} required onChange={(e)=>{setEmail(e.target.value)}}/>
               <textarea rows={8} name='message' placeholder='Your Message' value={message} required onChange={(e)=>{setMessage(e.target.value)}} />
               <div className="contact-btn-container">
-              <button type='sumbit' className='send-btn'>{loading?'processing...':'send'}</button>
-              <button className='clear-btn' onClick={()=>formclear()}>Clear All</button>
+              <button type='sumbit' className='ui-btn send-btn '><span>{loading?'processing...':'send'}</span></button>
+              <button className='ui-btn clear-btn ' onClick={()=>formclear()}><span>Clear All</span></button>
               </div>
           </motion.form>
         </motion.div>

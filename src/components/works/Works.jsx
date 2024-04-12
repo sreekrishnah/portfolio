@@ -9,7 +9,7 @@ const workList = [
     name:'Weather Today',
     desription:`"Designed and developed a global weather application, integrating OpenWeather API for real-time forecasts, offering seamless access to accurate weather worldwide."`,
     date:'Feb 26, 2024',
-    button:'check weather',
+    button:'Get weather',
     viewlink:'https://weather-from-openweather.netlify.app/',
     codelink:'https://github.com/SritharanKalimuthu/React_Learnings'
   },
@@ -48,20 +48,59 @@ const WorkContainer = (workList) =>{
       }
     },
   }
+
+  const boxvariant = {
+    initial:{
+      y:100,
+      opacity:0,
+    },
+    animate:{
+      y:0,
+      opacity:1,
+      transition:{
+        duration:.7,
+        delay:.4,
+      }
+    }
+  }
+
+  const boxvariant2 = {
+    initial:{
+      y:100,
+      opacity:0,
+    },
+    animate:{
+      y:0,
+      opacity:1,
+      transition:{
+        duration:.7,
+      }
+    }
+  }
+
+
   return <section>
         {/* <img className="cloud" src="/clouds.svg" alt=""/> */}
         <img src='/mountains.png' alt='' className='mountains'/>
         <motion.div className="works-container" variants={workvariant} initial='initial' whileInView='animate'>
-          <div className="works-image">
+          <motion.div 
+          variants={boxvariant2}
+          initial='initial'
+          whileInView='animate'
+          className="works-image">
             <img src={workList.img} alt=''/>
-          </div>
-            <div className="works-text-container">
+          </motion.div>
+            <motion.div
+            variants={boxvariant}
+            initial='initial'
+            whileInView='animate' className="works-text-container">
                 <h2>{workList.name}</h2>
                 <span>{workList.date}</span>
                 <p>{workList.desription}</p>
-                {workList.button?<a href={workList.viewlink} target='_blank'><button className='link-preview-btn'>{workList.button}</button></a>:null}
-                <a href={workList.codelink} target='_blank'><button className="code-btn">View Code</button></a>
-            </div>
+                {workList.button?<a href={workList.viewlink} target='_blank'><button className='link-preview-btn ui-btn'><span>{workList.button}</span></button></a>:null}
+                <a href={workList.codelink} target='_blank'><button className="code-btn ui-btn"><span>View Code</span></button></a>
+            </motion.div>
+            
         </motion.div>
   </section>
 }

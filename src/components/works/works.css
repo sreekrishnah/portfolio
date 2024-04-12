@@ -25,9 +25,11 @@
     text-align: center;
     padding-top: 7rem;
     font-family: "Timmana", sans-serif;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 700;
-    color: orange;
+    background: -webkit-linear-gradient(#d1a8ee, #8070db);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .progress-line-bar{
@@ -46,7 +48,7 @@
 
 
 .works-text-container{
-    margin-top: 8rem;
+    margin-top: 12rem;
     margin-left: 1rem;
     color: #ffff;
     width: 32rem;
@@ -61,8 +63,9 @@
 }
 
 .works-image img{
-    margin-top: 8rem;
-    border-radius: 1rem;
+    margin-top: 12rem;
+    border: 8px solid #ffffff23;
+    border-radius: 5px;
     /* background: #00000081;
     box-shadow: 0 0 10px 2px #1d1c1c;
     backdrop-filter: blur( 3.5px );
@@ -74,6 +77,7 @@
 }
 
 .works-text-container h2{
+    color: orange;
     font-size: 2rem;
     font-weight: 700;
     text-shadow: 3px 3px 5px #000000;
@@ -91,19 +95,18 @@
 }
 
 .link-preview-btn{
-    margin: .5rem 2rem .5rem 0;
-    padding: .8rem 1.5rem;
-    border: 2px solid #ffa600;
-    border-radius: 1rem;
-    background-color: transparent;
-    color: #ffa600;
-    text-transform: capitalize;
-    cursor:pointer;
-    z-index: 3;
+    border: 2px solid orange;
 }
 
-.link-preview-btn:hover{
+.link-preview-btn span{
+    color: orange;
+}
+
+.link-preview-btn:hover,.link-preview-btn:focus{
     background-color: #ffa600;
+}
+
+.link-preview-btn:hover span,.link-preview-btn:focus span{
     color: #fff;
 }
 
@@ -112,18 +115,19 @@
 }
 
 .code-btn{
-    margin: .5rem 0;
-    padding: .8rem 1.5rem;
     border: 2px solid #2f00ff;
-    border-radius: 1rem;
-    background-color: transparent;
-    color: #2f00ff;
-    text-transform: capitalize;
-    cursor:pointer;
 }
 
-.code-btn:hover{
+.code-btn span{
+   color:#2f00ff;
+}
+
+.code-btn:hover,.code-btn:focus{
     background-color: #2f00ff;
+    color: #fff;
+}
+
+.code-btn:hover span,.code-btn:focus span{
     color: #fff;
 }
 
@@ -145,6 +149,10 @@
         flex-direction: column;
         align-items: center;
         padding:0rem 2.5rem;
+    }
+
+    #Works section{
+        height: auto;
     }
 
     .works-container:last-child{
@@ -182,11 +190,5 @@
     .works-text-container p{
         margin: 0;
         font-size: .9rem;
-    }
-
-    .link-preview-btn,.code-btn{
-        margin: 0 1rem 0 0;
-        padding: .6rem .9rem;
-        font-size: .8rem;
     }
 }

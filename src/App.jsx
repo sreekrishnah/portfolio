@@ -4,21 +4,21 @@ import Hero from './components/hero/Hero'
 import About from './components/about/About'
 import Works from './components/works/Works'
 import Contact from './components/contact/Contact'
-import AboutPage2 from './components/about/AboutPage2'
+import Skills from './components/about/Skills'
 
 function App() {
 
   return (
     <>
-     <div className="construction-div">
+     {/* <div className="construction-div">
       <img src='/construction.jpg' alt=''/>
-      </div>
+      </div> */}
       <Navbar />
       <Hero/>
-      {/* <About/>
-      <AboutPage2/>
+      <About/>
+      <Skills/>
       <Works/>
-      <Contact/> */}
+      <Contact/>
     </>
   )
 }

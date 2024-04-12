@@ -16,54 +16,34 @@
     position: absolute;
     top: 0rem;
     filter: opacity(80%);
-    z-index: 1;
+    z-index: 0;
 }
 
 .about-container{
+    height: 100vh;
     position: relative;
     display: grid;
     grid-template-columns: repeat(2,auto);
-    align-items: center;
     justify-content: space-between;
     z-index: 3;
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
     color: #fff;
 }
 
-/* .academic-container{
-    margin-left: 2rem;
-    color: #0000;
-    width: 80%;
-}
-
-.academic-container .vl{
-    position: absolute;
-    width: 7px;
-    height: 83vh;
-    background: #fff;
-    top: 12%;
-    left: 31.5%;
-    margin-left: -3px;
-    z-index: -1;
-}
-
-.skill-container{
- background:none;
-} */
-
-.do-container{
-    margin-top: 5rem;
-    padding: 2rem;
-    width: 60vw;
+.do-container,.skill-container{
+    margin-top: 3.5rem;
+    padding: 1rem;
     display: flex;
     justify-content: space-between;
+    text-align: center;
 }
 
 .title-card{
     padding: 2rem;
     width: 15rem;
 }
-.title-card h1{
+
+.title-card h1,.title-card2 h1{
     text-align: center;
     font-size: 4rem;
     line-height: 3.5rem;
@@ -79,166 +59,451 @@
     justify-content: space-between;
 }
 
-.title-card li{
+.title-card li,.title-card2 h3{
     margin-top: 1rem;
     font-size: 17px;
     font-weight: 600;
     color:thistle;
 }
 
+.do-description{
+    position: relative;
+}
+
 .do-container p{
     padding: 2rem;
-    margin-top: 2rem;
-    font-size: 17.5px;
+    margin-top: 1rem;
+    font-size: 18px;
+    font-weight: 400;
 }
 
-.do-container span{
-    padding: 2rem;
-    font-size: 17px;
-}
-
-.about-section-2{
-    position: relative;
-    z-index: 3;
-    color: #000000;
-    padding:7rem 5rem;
-    display: grid;
-    grid-template-columns: repeat(4,auto);
-    backdrop-filter: blur(3px);
-}
-
-.section2-content{
-    width: 16rem;
-    padding: 1rem;
-    background: rgba( 255, 255, 255, 0.1 );
-    box-shadow: 4px 4px 10px 2px #000000;
-    backdrop-filter: blur( 3.5px );
-    -webkit-backdrop-filter: blur( 3.5px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    transition: all ease 600ms;
-}
-
-.about-text-box{
-    height: 23rem;
-    padding: 1rem;
-    background: rgba(255, 255, 255, 0.432);
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
-
-.about-text-box span{
-    color: #383838;
-    font-size: .8rem;
+.do-container h4{
+    color: orange;
+    font-size: 19px;
     font-weight: 600;
-
 }
 
-.about-text-box hr{
-    margin: 1rem 0;
-    height: 2px;
-    border: none;
-    background-color: #383535;
+
+.skill-container{
+    grid-column: 2/2;
+    grid-row: 1/3;
 }
 
-.about-text-box p{
-    font-size: .95rem;
+.tech-box-container{
+    margin-top:2rem;
+    width:30rem;
+    height: 25rem;
+    background:linear-gradient(240deg,#5e5881, #0d2c6e);
+    border-radius: 5px;
+    box-shadow: #8178a8bd 5px 5px, #726b92bd 10px 10px;
+    box-shadow: #6a5bacbd 0px 30px 100px -10px, #7717afbd 0px 10px 30px -15px;
+    display: flex;
 }
 
-.about-text-box a{
-    color: #2e01a0;
-    font-weight: 700;
+.tech-box-container img{
+    width: 2rem;
+    margin-right: .2rem;
     cursor: pointer;
-    text-shadow: 3px 3px 2px #00000056;
 }
 
-.section2-content img{
-    width: 4rem;
-    filter: drop-shadow(5px 5px 1px #201f1f);
-    transition: all ease 500ms;
+.tech-box-container ul{
+    display: flex;
+    color: #fff;
+    padding:20px 10px 15px;
 }
 
-.section2-content img:hover{
-    transform: scale(1);
+.tech-box-container li{
+    display: flex;
+    align-items: center;
+    font-size:16px;
+    font-weight: 600;
+    margin-right: 1.5rem;
+    cursor: pointer;
 }
 
-.text-box-thumnail{
-    top: -10%;
+.tech-box-container li:nth-child(2) img{
+    width: 1.6rem;
+}
+
+.tech-box-container li:nth-child(3) img{
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+
+.tech-box-container li:nth-child(1){
+    margin-left: .5rem;
+}
+
+.activesection{
+    color: orange;
+    text-decoration:3px underline orange;
+}
+
+.tech-box{
+    margin:0 1rem;
+    background:linear-gradient(240deg,#dac9e4, #a495fa);
+    width: 27rem;
+    height: 17rem;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.tech-box p{
+    text-align: left;
+    color: #000;
+    padding: 2rem;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.logos-container{
+    width: 27rem;
+}
+
+.logos{
+    margin: 1rem 1.5rem;
+    filter: drop-shadow(4px 4px 5px #000000);
+}
+
+.title-card2{
+    padding: 2rem;
+}
+
+.role-container{
+    padding: 0 4rem;
+    display: flex;
     position: relative;
 }
+
+.role-img-container{
+    opacity: 100%;
+}
+
+.role-img-container img{
+    width: 12rem;
+    margin-right: 2rem;
+    border: 5px solid #ffffff23;
+    cursor: pointer;
+    transition: all ease .5s;
+}
+
+.role-description{
+    margin: 0 1rem;
+    padding: 10px;
+    position: absolute;
+    top: 40%;
+    opacity: 70%;
+}
+
+.role-description h2{
+    font-size: 17px;
+    font-weight: 800;
+    text-shadow: 2px 2px 3px #000;
+    margin-bottom: .5rem;
+    transition: all ease .5s;
+    cursor: pointer;
+}
+.role-description p{
+    width: 12rem;
+    font-size: 12px;
+    font-weight: 500;
+    text-shadow: 2px 2px 3px #000;
+    transition: all ease .5s;
+    cursor: pointer;
+}
+
+.role-img-container:hover .role-description{
+    opacity: 100%;
+}
+
+.role-img-container:hover h2{
+    font-size: 23px;
+    transform: scale(1.1);
+}
+
+.role-img-container:hover p{
+    font-size: 14px;
+    transform: scale(1.1);
+}
+
+.role-img-container:hover img{
+    opacity: 45%;
+    cursor: pointer;
+}
+
+.role-img-container:hover img{
+    transform: scale(1.1);
+}
+
+.role-img-container img:nth-child(1){
+    border-radius: 30% 70% 50% 30% / 30% 30% 70% 70% ;
+}
+
+.role-img-container img:nth-child(2){
+    border-radius: 56% 44% 20% 80% / 84% 60% 40% 16% ;
+}
+
+.role-img-container img:nth-child(3){
+    border-radius: 91% 9% 20% 80% / 65% 66% 34% 35% ;
+}
+
 
 @media screen and (max-width:1115px) {
-    .academic-container{
-        margin-left: 1rem;
-        color: #0000;
+
+    .do-container{
+        padding: 1rem 1rem 0 0;
     }
     
-    .academic-container .vl{
-        left: 29.5%;
+    .title-card{
+        padding: 1rem;
+        width: 12rem;
+    }
+    
+    .title-card h1,.title-card2 h1{
+        font-size: 3.8rem;
+    }
+    .title-card ul{
+        width: 11rem;
+    }
+    
+    .title-card li,.title-card2 h3{
+        font-size: 15px;
+    }
+    
+    .do-container p{
+        padding: 1.5rem;
+        margin-top: 1.5rem;
+        font-size: 16px;
+    }
+    
+    .do-container h4{
+        font-size: 17px;
+    }
+    
+    .tech-box-container{
+        margin-top:2rem;
+        width:25rem;
+        height: 26rem;
+    }
+    
+    .tech-box-container img{
+        width: 1.5rem;
+    }
+    
+    
+    .tech-box-container li{
+        font-size:14px;
+    }
+    
+    .tech-box-container li:nth-child(2) img{
+        width: 1.4rem;
+    }
+    
+    .tech-box{
+        width: 23rem;
+    }
+    
+    .tech-box p{
+        padding: 1.2rem;
+        font-size: 15.5px;
     }
 
-    .about-section-2{
-        padding:8rem .5rem;
+    .logos-container{
+        width: 24rem;
+        overflow: hidden;
     }
-    .section2-content{
-        width: 16.5rem;
+    
+    .title-card2{
+        padding: 1rem;
+    }
+    
+    .role-container{
+        padding: 0 1.5rem;
+    }
+
+    .role-img-container img{
+        width: 10rem;
+    }
+
+    .role-description h2{
+        font-size: 16px;
+    }
+
+    .role-description p{
+        width: 10rem;
+        font-size: 13px;
+    }
+
+    .role-img-container:hover h2{
+        font-size: 18px;
+    }
+    
+    .role-img-container:hover p{
+        font-size: 13px;
+        transform: scale(1.1);
     }
 }
 
 @media screen and (max-width:400px) {
     .about-container{
+        height: auto;
+        display: flex;
         flex-direction: column;
     }
 
-    .skill-container{
-        margin-bottom: 3rem;
+    .do-container,.skill-container{
+        margin-top: 1rem;
+        flex-direction: column;
+        justify-content: flex-start;
     }
-
-    .academic-container .vl{
-        top: 7%;
-        left: 2.2rem;
-        width: 5px;
-        height: 70vh;
-    }
-    .about-section-2{
-        padding: 5rem 2rem;
-        grid-template-columns: repeat(1,auto);
-    }
-
-    .section2-content{
+    
+    .title-card{
         width: auto;
-        margin-bottom: 2rem;
+        padding: 1rem;
+        white-space: nowrap;
     }
 
-    .about-text-box{
+    .title-card h1{
+        text-align: left;
+    }
+    
+    .title-card h1,.title-card2 h1{
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+    
+    .title-card li,.title-card2 h3{
+        margin-top: 0;
+        font-size: 12px;
+    }
+
+    .title-card2{
+        width: auto;
+        margin-top: 2rem;
+        padding: 0;
+    }
+    
+    .do-description{
+        position: static;
+    }
+    
+    .do-container p{
+        padding: 0 1rem;
+        margin-top: 0;
+        font-size: 15px;
+        text-align: left;
+    }
+    
+    .do-container h4{
+        padding: 1rem 2rem 0;
+        font-size: 16px;
+    }
+
+    .skill-container{
+        margin: 0;
+        padding: 0;
+    }
+    
+    .tech-box-container{
+        width: 100vw;
         height: auto;
+        margin: 0;
+        padding: 0;
+        margin-top:1rem;
     }
 
-    .about-text-box span{
-        font-size: .7rem;
+    .arsenal-content{
+        width: 100vw;
     }
     
-    .about-text-box p{
-        font-size: .85rem;
+    .tech-box-container img{
+        margin-right: .15rem;
+        width: 1.5rem;
+        height: 1.5rem;
+        cursor: pointer;
     }
     
-    .section2-content img{
-        width: 3rem;
-        filter: drop-shadow(5px 5px 1px #201f1f);
-        transition: all ease 500ms;
+    .tech-box-container ul{
+        display: flex;
+        align-items: center;
+        width: 100vw;
+        margin: 0;
+        padding:20px 5px 15px;
     }
     
-    .section2-content img:hover{
+    .tech-box-container li{
+        width: auto;
+        font-size:14px;
+        margin-right: 1rem;
+    }
+    .tech-box-container li:nth-last-child(1){
+        margin-right: 0;
+    }
+    
+    .tech-box{
+        padding: 0;
+        margin:0;
+    }
+    
+    .tech-box p{
+        color: #000;
+        padding: 2rem 1rem;
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .logos-container{
+        width: auto;
+        overflow: hidden;
+    }
+    
+    .role-container{
+        padding:2rem;
+        flex-direction: column;
+    }
+
+    .role-img-container{
+        position: sticky;
+        top: 10%;
+    }
+    
+    .role-img-container img{
+        width: 100%;
+        margin-right: 0;
+        border: 0;
+        border-radius: 5px;
+    }
+    
+    .role-description{
+        background-color: #1f0537;
+        padding: 1rem;
+         border-radius: 91% 9% 20% 80% / 65% 66% 34% 35% ;
+        top: 60%;
+        opacity: 100%;
+    }
+    
+    .role-description h2{
+        font-size: 20px;
+    }
+    .role-description p{
+        font-size: 15px;
+    }
+    
+    .role-img-container:hover{
+        opacity: 100%;
+    }
+    
+    .role-img-container:hover img{
+        opacity: 100%;
+    }
+    
+    .role-img-container:hover img{
         transform: scale(1);
     }
-    
-    .text-box-thumnail{
-        top: 0;
-        left: -40%;
-        position: relative;
+
+    .role-img-container img:nth-child(n){
+        border-radius: 5px ;
     }
-    
+
 }

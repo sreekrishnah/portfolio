@@ -1,7 +1,13 @@
 import {mirrorEasing, motion} from "framer-motion";
+import { Typewriter, Cursor, useTypewriter } from 'react-simple-typewriter'
 import './hero.css';
 
 function Hero() {
+
+  // const {text} = useTypewriter({
+  //   words:['Front-end Developer','Designer','CyberAddict'],
+  //   loop:{},
+  // })
 
   const boxvariant = {
     initial:{
@@ -16,21 +22,6 @@ function Hero() {
       }
     }
   }
-
-  // const boxvariant1 = {
-  //   initial:{
-  //     x:200,
-  //     opacity:0,
-  //   },
-  //   animate:{
-  //     x:0,
-  //     opacity:1,
-  //     transition:{
-  //       duration:.9,
-  //       delay:.2,
-  //     }
-  //   }
-  // }
 
   const textvariant1 = {
     initial:{
@@ -114,7 +105,18 @@ function Hero() {
                   <motion.h1 
                   variants={textvariant1}
                   initial='initial'
-                  whileInView='animate'>Front-end developer and web designer...</motion.h1>
+                  whileInView='animate'
+                  >And I am <span style={{ color: 'orange', }}><Typewriter
+                  words={['Front-end Developer...','Web Designer...','Cyber-Addict...']}
+                  loop={false}
+                  cursor
+                  cursorStyle='|'
+                  typeSpeed={120}
+                  deleteSpeed={80}
+                  delaySpeed={1500}
+                />
+                </span>
+                </motion.h1>
                   <motion.div
                   className="hero-description" 
                   variants={textvariant3}
@@ -132,14 +134,14 @@ function Hero() {
                     <a href="tel:+919786348620"><ion-icon name="call"></ion-icon></a>
                       </motion.div>
                     <div className="hero-btn">
-                      <a href='#About'><motion.button className='know-btn' 
+                      <a href='#About'><motion.button className='know-btn ui-btn' 
                       variants={buttonvariant}
                       initial='initial'
-                      whileInView='animate'>Know me!</motion.button></a>
-                      <a href='#Contact'><motion.button className='contact-btn' 
+                      whileInView='animate'><span>Know me!</span></motion.button></a>
+                      <a href='#Contact'><motion.button className=' contact-btn ui-btn'
                       variants={buttonvariant}
                       initial='initial'
-                      whileInView='animate'>Hire me!</motion.button></a>
+                      whileInView='animate'><span>Hire me!</span></motion.button></a>
                   </div>
                   <motion.img src="/scroll.png" className="scroll-btn" 
                   initial={{opacity:0}} 
@@ -157,14 +159,6 @@ function Hero() {
               variants={boxvariant}
               initial='initial'
               whileInView='animate'/>
-              {/* <motion.div className="stroke-container"
-              variants={boxvariant1}
-              initial='initial'
-              whileInView='animate'>
-              <div className="stroke1"></div>
-              <div className="stroke2"></div>
-              <div className="stroke3"></div>
-              </motion.div> */}
             </div>
         </div>
     </section>
