@@ -149,7 +149,7 @@
     }
     
     .title-card3{
-        padding: 2rem 0 0;
+        padding: 2rem 2rem 0;
         line-height: 3rem;
     }
     
@@ -170,6 +170,7 @@
     }
     
     .cyber-quote{
+        padding: 0 2rem;
         font-size: .95rem;
     }
 }
