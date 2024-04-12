@@ -151,8 +151,12 @@
 
   @media screen and (max-width:400px) {
 
+    #Home{
+        background:linear-gradient(180deg,#25033b,#1e013a);
+    }
+    
     .forest{
-        bottom:-1rem;
+        display: none;
     }
 
     .hero-container{
