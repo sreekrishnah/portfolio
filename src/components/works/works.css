@@ -151,10 +151,6 @@
         padding:0rem 2.5rem;
     }
 
-    #Works section{
-        height: auto;
-    }
-
     .works-container:last-child{
         padding-bottom: 5rem;
     }

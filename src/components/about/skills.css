@@ -107,8 +107,7 @@
 
 
 @media screen and (max-width:1115px) {
-    
-    
+      
 .slider-container{
     width: 65rem;
 }
@@ -124,7 +123,7 @@
 }
 
 .titlebox-thumnail{
-    width: 3.5rem;
+    width: 3rem;
 }
 
 .title-card-txt h3{
@@ -140,9 +139,9 @@
 @media screen and (max-width:400px) {
 
 
-.skillset-container{
-    height: auto;
-}
+    .skillset-container{
+        height: 100vh;
+    }
     
     .slider-container{
         width: 23rem;

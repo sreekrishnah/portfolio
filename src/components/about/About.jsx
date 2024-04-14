@@ -152,12 +152,9 @@ function About() {
                     <li className={activeSection==='MERN'?'activesection':'arsenal-list'}  onClick={()=>setDescription(techboxstanza.MERN)||setActiveSection('MERN')}><img src='/MERN.png' alt=''/>MERN</li>
                     <li className={activeSection==='bootstrap'?'activesection':'arsenal-list'}  onClick={()=>setDescription(techboxstanza.bootstrap)||setActiveSection('bootstrap')}><img src='/bootstrap.png' alt=''/>Bootstrap</li>
                   </ul>
-                  <motion.div variants={boxvariant}
-                  initial='initial'
-                  whileInView='animate'
-                  className="tech-box">
+                  <div className="tech-box">
                     <p>{description}</p>
-                  </motion.div>
+                  </div>
                   <div className="logos-container">
                    <Marquee style={{width:'27rem',marginLeft:'1rem'}}   direction='left'
                    autoFill='true'>

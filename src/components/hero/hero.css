@@ -166,14 +166,14 @@
     }
 
     .cyber-image-container{
-        margin-top: 2.5rem;
+        margin-top: 2rem;
         width: auto;
     }
 
     .cyber-image-container img{
         margin: 0;
         padding: 0;
-        width: 10rem;
+        width: 12rem;
         float: none;
     }
 
@@ -184,26 +184,22 @@
 
     .hero-text-container h1{
         max-width: 100%;
-        font-size: 1.2rem;
+        font-size: 1.3rem;
         margin: 0;
     }
-
-    .hero-text-container h1::after{
-        height: 15px;
-    }
-
+    
     .hero-text-container h2{
         margin: 0;
         font-size: 1.2rem;
     }
 
     .hero-description span{
-        font-size: .9rem;
+        font-size: .95rem;
         margin: 0;
     }
 
     .hero-description p{
-        font-size: .85rem;
+        font-size: .9rem;
         margin: 0;
     }
 
