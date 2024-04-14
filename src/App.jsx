@@ -10,9 +10,6 @@ function App() {
 
   return (
     <>
-     {/* <div className="construction-div">
-      <img src='/construction.jpg' alt=''/>
-      </div> */}
       <Navbar />
       <Hero/>
       <About/>

@@ -3,30 +3,26 @@ import { useState, useEffect } from "react";
 import "./navbar.css";
 
 function Navbar() {
+
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("Home");
 
-  if(open){
-    document.body.classList.add('block-scroll');
-  }else{
-    document.body.classList.remove('block-scroll');
-  }
-
   useEffect(() => {
-    const handleScroll = () => {
-      const Home = document.getElementById("Home");
-      const About = document.getElementById("About");
-      const Works = document.getElementById("Works");
-      const Contact = document.getElementById("Contact");
 
-      const sections = [Home, About, Works, Contact];
+    // Function that handles selection of current page in navbar list.
+    const handleScroll = () => {
+      const sections = ["Home", "About", "Works", "Contact"].map(
+        (id) => document.getElementById(id)
+      );
+      const scrollPosition = window.scrollY;
+
       sections.forEach((section) => {
-        const top = section.offsetTop - 50;
-        const bottom = top + section.offsetHeight;
-        const scrollPosition = window.scrollY;
+        const { offsetTop, offsetHeight, id } = section;
+        const top = offsetTop - 50;
+        const bottom = top + offsetHeight;
 
         if (scrollPosition >= top && scrollPosition < bottom) {
-          setActiveSection(section.id);
+          setActiveSection(id);
         }
       });
     };
@@ -35,38 +31,49 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+
+  // To block scroll while sidebar is open.
+  useEffect(() => {
+    if (open) {
+      document.body.classList.add("block-scroll");
+    } else {
+      document.body.classList.remove("block-scroll");
+    }
+  }, [open]);
+
+  // menubar toggle function.
+  const toggleSidebar = () => setOpen((prev) => !prev);
+
   return (
+
     <nav className={open ? "sidebar" : null}>
+
       <motion.h1>
         <a href="#Home">KS</a>
       </motion.h1>
+
       <motion.ul className={open ? "menubar" : ""}>
         {["Home", "About", "Works", "Contact"].map((value, index) => (
-            <motion.a
-              href={`#${value}`}
-              className={
-                activeSection === value ? "current-page navigator" : "navigator"
-              }
-              onClick={open?() => setOpen((prev) => !prev):null}
-              key={index}
-            >
-              {value}
-            </motion.a>
-          
+          <motion.a
+            href={`#${value}`}
+            className={
+              activeSection === value ? "current-page navigator" : "navigator"
+            }
+            onClick={open ? toggleSidebar : null}
+            key={index}
+          >
+            {value}
+          </motion.a>
         ))}
       </motion.ul>
+
       <motion.button
         className="toggle-btn"
-        onClick={() => setOpen((prev) => !prev)}
+        onClick={toggleSidebar}
         animate={open ? "open" : "close"}
       >
-        <motion.svg
-          width="23"
-          height="23"
-          viewBox="0 0 23 23"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-        >
+
+        <motion.svg width="23" height="23" viewBox="0 0 23 23">
           <motion.path
             strokeWidth="3"
             stroke="white"
@@ -96,6 +103,7 @@ function Navbar() {
             }}
           />
         </motion.svg>
+        
       </motion.button>
     </nav>
   );

@@ -45,20 +45,6 @@ li{
     list-style: none;
 }
 
-/* Site Construction Image */
-
-.construction-div{
-    position: absolute;
-    height: 110vh;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 99;
-    background-color: #4f4f4f;
-    backdrop-filter: blur(20px);
-}
-
 /* Glitch Button Animation*/
 
 .ui-btn {
@@ -218,9 +204,6 @@ li{
     }
   }
 
-.construction-div img {
-    width: 40rem;
-}
 
 @media screen and (max-width:400px) {
 
@@ -239,7 +222,4 @@ li{
         scroll-snap-align: none;
     }
 
-    .construction-div img{
-        width: 22rem;
-    }
 }

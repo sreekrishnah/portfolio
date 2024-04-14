@@ -1,13 +1,14 @@
-import './works.css'
+import './works.css';
 import { useRef } from 'react';
-import {animate, motion ,useScroll, useSpring } from 'framer-motion';
+import { motion, useScroll, useSpring } from 'framer-motion'; 
 
+// Array of work items
 const workList = [
   {
     id:1,
     img:'/weather.png',
     name:'Weather Today',
-    desription:`"Designed and developed a global weather application, integrating OpenWeather API for real-time forecasts, offering seamless access to accurate weather worldwide."`,
+    description:`" Designed and developed a global weather application, integrating OpenWeather API for real-time forecasts, offering seamless access to accurate weather worldwide. "`,
     date:'Feb 26, 2024',
     button:'Get weather',
     viewlink:'https://weather-from-openweather.netlify.app/',
@@ -17,7 +18,7 @@ const workList = [
     id:2,
     img:'/bookstore.jpeg',
     name:'Book Store - CRUD',
-    desription:`"Architected a CRUD book store application using MERN stack technology, facilitating seamless addition and removal of books. Empowering users with intuitive controls for efficient book management."`,
+    description:`" Architected a CRUD book store application using MERN stack technology, facilitating seamless addition and removal of books. Empowering users with intuitive controls for efficient book management. "`,
     date:'Mar 12, 2024',
     codelink:'https://github.com/SritharanKalimuthu/Bookstore-CRUD'
   },
@@ -25,17 +26,19 @@ const workList = [
     id:3,
     img:'/agecalculator.jpg',
     name:'Age Calculator',
-    desription:`"Engineered an age calculator application utilizing React, providing efficient age calculation functionality. Seamlessly designed for user-friendly experience and intuitive interaction."`,
+    description:`" Engineered an age calculator application utilizing React, providing efficient age calculation functionality. Seamlessly designed for user-friendly experience and intuitive interaction. "`,
     date:'Jan 20, 2024',
     button:'count age',
     viewlink:'https://agecalculator-frontendmentorchallenge.netlify.app/',
     codelink:'https://github.com/SritharanKalimuthu/FrontendMentor/tree/main'
   }
-]
+  // Add more work items here...
+];
 
-const WorkContainer = (workList) =>{
-
-  const workvariant = {
+// WorkContainer component to render each work item
+const WorkContainer = ({ img, name, date, description, button, viewlink, codelink }) =>{
+  // Framer motion variants for animation
+  const workVariant = {
     initial:{
       y:100,
       opacity:0,
@@ -47,9 +50,9 @@ const WorkContainer = (workList) =>{
         duration:.6,
       }
     },
-  }
+  };
 
-  const boxvariant = {
+  const boxVariant = {
     initial:{
       y:100,
       opacity:0,
@@ -62,9 +65,9 @@ const WorkContainer = (workList) =>{
         delay:.4,
       }
     }
-  }
+  };
 
-  const boxvariant2 = {
+  const boxVariant2 = {
     initial:{
       y:100,
       opacity:0,
@@ -76,63 +79,52 @@ const WorkContainer = (workList) =>{
         duration:.7,
       }
     }
-  }
+  };
 
-
-  return <section>
-        {/* <img className="cloud" src="/clouds.svg" alt=""/> */}
-        <img src='/mountains.png' alt='' className='mountains'/>
-        <motion.div className="works-container" variants={workvariant} initial='initial' whileInView='animate'>
-          <motion.div 
-          variants={boxvariant2}
-          initial='initial'
-          whileInView='animate'
-          className="works-image">
-            <img src={workList.img} alt=''/>
-          </motion.div>
-            <motion.div
-            variants={boxvariant}
-            initial='initial'
-            whileInView='animate' className="works-text-container">
-                <h2>{workList.name}</h2>
-                <span>{workList.date}</span>
-                <p>{workList.desription}</p>
-                {workList.button?<a href={workList.viewlink} target='_blank'><button className='link-preview-btn ui-btn'><span>{workList.button}</span></button></a>:null}
-                <a href={workList.codelink} target='_blank'><button className="code-btn ui-btn"><span>View Code</span></button></a>
-            </motion.div>
-            
+  return (
+    <section>
+      <img src='/mountains.png' alt='' className='mountains'/>
+      <motion.div className="works-container" variants={workVariant} initial='initial' whileInView='animate'>
+        <motion.div variants={boxVariant2} initial='initial' whileInView='animate' className="works-image">
+          <img src={img} alt=''/>
         </motion.div>
-  </section>
-}
+        <motion.div variants={boxVariant} initial='initial' whileInView='animate' className="works-text-container">
+          <h2>{name}</h2>
+          <span>{date}</span>
+          <p>{description}</p>
+          {button && <a href={viewlink} target='_blank'><button className='link-preview-btn ui-btn'><span>{button}</span></button></a>}
+          <a href={codelink} target='_blank'><button className="code-btn ui-btn"><span>View Code</span></button></a>
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+};
 
 function Works() {
-
   const ref = useRef();
 
-  const {scrollYProgress} = useScroll({
-    target:ref,
-    offset:["end end","start start"]
-  })
+  // Framer motion hook to track scroll position
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ["end end", "start start"]
+  });
 
-  const scaleX = useSpring(scrollYProgress,
-    {
-      stiffness:100,
-      damping:30,
-    })
+  // Framer motion spring for smooth animation
+  const scaleX = useSpring(scrollYProgress, {
+    stiffness: 100,
+    damping: 30,
+  });
 
-
-    return (
-      <div id="Works" ref={ref}>
-        <div className='progress'>
-          <h1>Featured Works</h1>
-          <motion.div style={{scaleX:scaleX}} className='progress-line-bar'></motion.div>
-        </div>
-        {workList.map((workList)=>{
-            return <WorkContainer {...workList} key={workList.id}/>
-        })}
+  return (
+    <div id="Works" ref={ref}>
+      <div className='progress'>
+        <h1>Featured Works</h1>
+        <motion.div style={{ scaleX: scaleX }} className='progress-line-bar'></motion.div>
       </div>
-    )
-  }
+      {/* Render WorkContainer for each work item */}
+      {workList.map((workItem) => <WorkContainer key={workItem.id} {...workItem} />)}
+    </div>
+  );
+}
   
-  export default Works
-  
+export default Works;

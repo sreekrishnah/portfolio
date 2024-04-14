@@ -61,6 +61,10 @@
     margin-bottom: .8rem;
 }
 
+.hero-text-container span{
+    margin-left: 6px;
+}
+
 .hero-description{
     color: #fff;
     padding: 0 0 1.5rem 1rem;
@@ -143,13 +147,7 @@
     animation: morph 8s ease-in-out infinite;
 }
 
-@keyframes blink{
-    to{
-      background:transparent;
-    }
-  }
-
-  @media screen and (max-width:400px) {
+@media screen and (max-width:400px) {
 
     #Home{
         background:linear-gradient(180deg,#25033b,#1e013a);
@@ -221,10 +219,11 @@
     }
 
     .slider-text{
-        width: 0;
         display: none;
     }
 }
+
+
 
 @keyframes morph {
     0%{
