@@ -34,19 +34,19 @@ function Hero() {
   }
 
 
-  const slider_variant = {
-    initial:{
-      x:1500,
-    },
-    animate:{
-      x:-1800,
-      transition:{
-          repeat:Infinity,
-          duration:9,
-          repeatType:mirrorEasing
-      }
-    }
-  }
+  // const slider_variant = {
+  //   initial:{
+  //     x:1500,
+  //   },
+  //   animate:{
+  //     x:-1800,
+  //     transition:{
+  //         repeat:Infinity,
+  //         duration:9,
+  //         repeatType:mirrorEasing
+  //     }
+  //   }
+  // }
 
   // end of variants..
 
@@ -124,12 +124,12 @@ function Hero() {
                       transition={{delay:2,duration:2,repeat:Infinity}}>
                   </motion.img>
 
-                  <motion.div className="slider-text" 
+                  {/* <motion.div className="slider-text" 
                   variants={slider_variant}
                   initial='initial'
                   whileInView='animate'>
                      Tech-enthusiast
-                  </motion.div>
+                  </motion.div> */}
 
               </div>
             <div className="cyber-image-container">
