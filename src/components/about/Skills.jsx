@@ -29,7 +29,7 @@ function Skills() {
         speed: 500,
         autoplaySpeed: 5000,
         cssEase: "linear",
-        pauseOnHover: false
+        pauseOnHover: true
     };
 
     const settings2 = {
@@ -39,7 +39,7 @@ function Skills() {
         speed: 500,
         autoplaySpeed: 5000,
         cssEase: "linear",
-        pauseOnHover: false
+        pauseOnHover: true
     };
 
 
@@ -70,7 +70,7 @@ function Skills() {
                     "The best thing about a boolean is even if you are wrong, you are only off by a bit."
                 </motion.h4>
                 <motion.div className="slider-container" variants={boxVariant} initial='initial' whileInView='animate'>
-                    <Slider {...(width > 400 ? settings : settings2)}>
+                    <Slider {...(width > 800 ? settings : settings2)}>
 
                       <div>
 

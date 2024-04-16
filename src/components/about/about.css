@@ -158,7 +158,8 @@
 }
 
 .logos-container{
-    width: 27rem;
+    width: 27.5rem;
+    overflow: hidden;
 }
 
 .logos{
@@ -350,7 +351,7 @@
     }
 }
 
-@media screen and (max-width:400px) {
+@media screen and (max-width:800px) {
     .about-container{
         height: auto;
         display: flex;
@@ -422,7 +423,7 @@
     }
     
     .tech-box-container img{
-        margin-right: .1rem;
+        margin-right: .2rem;
         width: 1.5rem;
         height: 1.5rem;
         cursor: pointer;
@@ -460,7 +461,7 @@
     }
 
     .logos-container{
-        width: 22.5rem;
+        width: auto;
         overflow: hidden;
     }
     

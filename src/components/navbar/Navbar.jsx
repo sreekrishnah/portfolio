@@ -3,13 +3,12 @@ import { useState, useEffect } from "react";
 import "./navbar.css";
 
 function Navbar() {
-
+  // State variables to manage the navbar's open/close state and active section
   const [open, setOpen] = useState(false);
   const [activeSection, setActiveSection] = useState("Home");
 
+  // Effect to update the active section based on scroll position
   useEffect(() => {
-
-    // Function that handles selection of current page in navbar list.
     const handleScroll = () => {
       const sections = ["Home", "About", "Works", "Contact"].map(
         (id) => document.getElementById(id)
@@ -31,8 +30,7 @@ function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-
-  // To block scroll while sidebar is open.
+  // Effect to prevent scrolling when the sidebar is open
   useEffect(() => {
     if (open) {
       document.body.classList.add("block-scroll");
@@ -41,39 +39,39 @@ function Navbar() {
     }
   }, [open]);
 
-  // menubar toggle function.
+  // Function to toggle the sidebar's open/close state
   const toggleSidebar = () => setOpen((prev) => !prev);
 
   return (
-
     <nav className={open ? "sidebar" : null}>
-
-      <motion.h1>
+      <h1>
         <a href="#Home">KS</a>
-      </motion.h1>
-
-      <motion.ul className={open ? "menubar" : ""}>
+      </h1>
+      <ul className={open ? "menubar" : ""}>
+        {/* Rendering navbar items dynamically */}
         {["Home", "About", "Works", "Contact"].map((value, index) => (
-          <motion.a
-            href={`#${value}`}
-            className={
-              activeSection === value ? "current-page navigator" : "navigator"
-            }
-            onClick={open ? toggleSidebar : null}
-            key={index}
-          >
-            {value}
-          </motion.a>
+          <li key={index}>
+            <a
+              href={`#${value}`}
+              className={
+                activeSection === value ? "current-page navigator" : "navigator"
+              }
+              // Conditionally handling click event to close sidebar
+              onClick={open ? toggleSidebar : null}
+            >
+              {value}
+            </a>
+          </li>
         ))}
-      </motion.ul>
-
+      </ul>
+      {/* Button to toggle the sidebar's open/close state */}
       <motion.button
         className="toggle-btn"
         onClick={toggleSidebar}
         animate={open ? "open" : "close"}
       >
-
         <motion.svg width="23" height="23" viewBox="0 0 23 23">
+          {/* Animated SVG paths for toggle button */}
           <motion.path
             strokeWidth="3"
             stroke="white"
@@ -103,7 +101,6 @@ function Navbar() {
             }}
           />
         </motion.svg>
-        
       </motion.button>
     </nav>
   );
