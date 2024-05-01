@@ -80,10 +80,6 @@ nav li {
   border: none;
 }
 
-svg {
-  background: none;
-  cursor: pointer;
-}
 
 @media screen and (max-width: 800px) {
   nav {

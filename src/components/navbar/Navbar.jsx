@@ -70,11 +70,11 @@ function Navbar() {
         onClick={toggleSidebar}
         animate={open ? "open" : "close"}
       >
-        <motion.svg width="23" height="23" viewBox="0 0 23 23">
-          {/* Animated SVG paths for toggle button */}
+      <motion.svg width="23" height="23" viewBox="0 0 23 23">
+          {/* Animated SVG paths for toggle button*/}
           <motion.path
             strokeWidth="3"
-            stroke="white"
+            stroke="orange"
             strokeLinecap="round"
             variants={{
               close: { d: "M 2 2.5 L 20 2.5" },
@@ -83,7 +83,7 @@ function Navbar() {
           />
           <motion.path
             strokeWidth="3"
-            stroke="white"
+            stroke="orange"
             strokeLinecap="round"
             d="M 2 9.423 L 20 9.423"
             variants={{
@@ -93,14 +93,15 @@ function Navbar() {
           />
           <motion.path
             strokeWidth="3"
-            stroke="white"
+            stroke="orange"
             strokeLinecap="round"
             variants={{
               close: { d: "M 2 16.346 L 20 16.346" },
               open: { d: "M 3 2.5 L 17 16.346" }
             }}
           />
-        </motion.svg>
+          </motion.svg> 
+          
       </motion.button>
     </nav>
   );
