@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Typewriter } from 'react-simple-typewriter';
 import './hero.css';
+import cv from '../../assets/CV.pdf'
 
 function Hero() {
   // Framer Motion variants for animations
@@ -92,7 +93,7 @@ function Hero() {
 
           <motion.div className="hero-btn" variants={opacityVariant} initial="initial" whileInView="animate">
             {/* Buttons for navigation */}
-            <a href='#About'><button className='know-btn ui-btn'><span>Know me!</span></button></a>
+            <a href={cv} download="cv.pdf"><button className='know-btn ui-btn'><span>Download CV!</span></button></a>
             <a href='#Contact'><button className='contact-btn ui-btn'><span>Hire me!</span></button></a>
           </motion.div>
 
