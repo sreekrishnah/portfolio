@@ -24,6 +24,14 @@ const workList = [
   },
   {
     id:3,
+    img:'/banking.png',
+    name:'Internet Banking',
+    description:`" This Application is a collaborative project developed as part of the Naan Mudhalvan program, an initiative by the Tamil Nadu government to enhance technical skills among students. The project aimed to create a secure, user-friendly online banking platform. "`,
+    date:'Dec 02, 2023',
+    codelink:'https://github.com/SritharanKalimuthu/Internet_Banking'
+  },
+  {
+    id:4,
     img:'/agecalculator.jpg',
     name:'Age Calculator',
     description:`" Engineered an age calculator application utilizing React, providing efficient age calculation functionality. Seamlessly designed for user-friendly experience and intuitive interaction. "`,

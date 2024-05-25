@@ -19,6 +19,13 @@ html{
     font-family: "League Spartan", sans-serif;
 }
 
+audio{
+  position: absolute;
+  top: 50%;
+  left: 30%;
+  z-index: 99;
+}
+
 body{
     background-color:#2e005a;
     color: #262527;

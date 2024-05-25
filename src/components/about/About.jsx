@@ -119,6 +119,14 @@ function About() {
         {/* Container for Role section */}
         <motion.div className="role-container" variants={variants2} initial='initial' whileInView='animate'>
           {/* Role description */}
+          <div className="role-img-container">
+            <img src='/cyberdesigner.jpg' alt='' />
+            <div className="role-description">
+              <h2>Software Engineer</h2>
+              <p>"Transforming ideas into digital solutions."</p>
+            </div>
+          </div>
+          {/* Role description */}
           <div className="role-img-container" >
             <img src='/coder.jpg' alt='' />
             <div className="role-description">
@@ -129,14 +137,6 @@ function About() {
           {/* Role description */}
           <div className="role-img-container">
             <img src='/designer.jpg' alt='' />
-            <div className="role-description">
-              <h2>Web Designer</h2>
-              <p>Turning Ideas into Visual Masterpieces</p>
-            </div>
-          </div>
-          {/* Role description */}
-          <div className="role-img-container">
-            <img src='/cyberdesigner.jpg' alt='' />
             <div className="role-description">
               <h2>Problem Solver</h2>
               <p>Solving Complex Challenges with Precision</p>

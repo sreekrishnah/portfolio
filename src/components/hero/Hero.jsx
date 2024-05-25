@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Typewriter } from 'react-simple-typewriter';
 import './hero.css';
-import cv from '../../assets/CV.pdf'
 
 function Hero() {
   // Framer Motion variants for animations
@@ -60,7 +59,7 @@ function Hero() {
             And I am  
             <span style={{ color: 'orange' }}>
               <Typewriter
-                words={['Front-end Developer...', 'Web Designer...', 'Cyber-Addict...']}
+                words={[ 'Software Engineer...','Front-end Developer...', 'Cyber-Addict...']}
                 loop={false}
                 cursor
                 cursorStyle='|'
@@ -93,12 +92,12 @@ function Hero() {
 
           <motion.div className="hero-btn" variants={opacityVariant} initial="initial" whileInView="animate">
             {/* Buttons for navigation */}
-            <a href={cv} download="cv.pdf"><button className='know-btn ui-btn'><span>Download CV!</span></button></a>
+            <a href='#About' ><button className='know-btn ui-btn'><span>About me!</span></button></a>
             <a href='#Contact'><button className='contact-btn ui-btn'><span>Hire me!</span></button></a>
           </motion.div>
 
           {/* Scroll button */}
-          <motion.img src="/scroll.png" className="scroll-btn" initial={{ opacity: 0 }} animate={{ opacity: 1, y: 10 }} transition={{ delay: 2, duration: 2, repeat: Infinity }} />
+          {/* <motion.img src="/scroll.png" className="scroll-btn" initial={{ opacity: 0 }} animate={{ opacity: 1, y: 10 }} transition={{ delay: 2, duration: 2, repeat: Infinity }} /> */}
         </div>
 
          {/* <motion.div className="slider-text" 
@@ -110,7 +109,7 @@ function Hero() {
                   
         {/* Image container */}
         <div className="cyber-image-container">
-          <motion.img className="tools"  src="/cybercoder.jpeg" alt="" variants={boxVariant} initial="initial" whileInView="animate" />
+          <img className="tools"  src="/cybercoder.jpeg" alt="" variants={boxVariant} initial="initial" whileInView="animate" />
         </div>
       </motion.div>
     </section>
