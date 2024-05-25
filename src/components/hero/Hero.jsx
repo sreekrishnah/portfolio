@@ -97,7 +97,7 @@ function Hero() {
           </motion.div>
 
           {/* Scroll button */}
-          {/* <motion.img src="/scroll.png" className="scroll-btn" initial={{ opacity: 0 }} animate={{ opacity: 1, y: 10 }} transition={{ delay: 2, duration: 2, repeat: Infinity }} /> */}
+          <motion.img src="/scroll.png" className="scroll-btn" initial={{ opacity: 0 }} animate={{ opacity: 1, y: 10 }} transition={{ delay: 2, duration: 2, repeat: Infinity }} />
         </div>
 
          {/* <motion.div className="slider-text" 
@@ -109,7 +109,7 @@ function Hero() {
                   
         {/* Image container */}
         <div className="cyber-image-container">
-          <img className="tools"  src="/cybercoder.jpeg" alt="" variants={boxVariant} initial="initial" whileInView="animate" />
+          <motion.img className="tools"  src="/cybercoder.jpeg" alt="" variants={boxVariant} initial="initial" whileInView="animate" />
         </div>
       </motion.div>
     </section>
