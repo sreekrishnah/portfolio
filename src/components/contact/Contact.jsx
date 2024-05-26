@@ -119,10 +119,10 @@ function Contact() {
             <h2>Mail me</h2>
             <a href='mailto:sritharkalimuthu@gmail.com'>sritharkalimuthu@gmail.com</a>
           </motion.div>
-          <motion.div variants={titleVariant} initial='initial' whileInView='animate' className="contact-item">
+          {/* <motion.div variants={titleVariant} initial='initial' whileInView='animate' className="contact-item">
             <h2>Call me</h2>
             <a href='tel:+919786348620'>+91 9786348620</a>
-          </motion.div>
+          </motion.div> */}
         </div>
 
         {/* Contact form */}
