@@ -91,7 +91,7 @@ const WorkContainer = ({ img, name, date, description, button, viewlink, codelin
 
   return (
     <section>
-      <img src='/mountains.png' alt='' className='mountains'/>
+      <img src='/mountains.png' alt='' className='mountains' />
       <motion.div className="works-container" variants={workVariant} initial='initial' whileInView='animate'>
         <motion.div variants={boxVariant2} initial='initial' whileInView='animate' className="works-image">
           <img src={img} alt=''/>
