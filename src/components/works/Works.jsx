@@ -20,7 +20,7 @@ const workList = [
     name:'Book Store - CRUD',
     description:`" Architected a CRUD book store application using MERN stack technology, facilitating seamless addition and removal of books. Empowering users with intuitive controls for efficient book management. "`,
     date:'Mar 12, 2024',
-    codelink:'https://github.com/SritharanKalimuthu/Bookstore-CRUD'
+    codelink:'https://github.com/SritharanKalimuthu/BookStore'
   },
   {
     id:3,
