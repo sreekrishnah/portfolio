@@ -164,6 +164,7 @@
 
 .logos{
     margin: 1rem 2rem;
+    filter: brightness(100%);
     filter: drop-shadow(4px 4px 5px #000000);
 }
 

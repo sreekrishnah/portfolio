@@ -18,22 +18,7 @@ function About() {
   const [description, setDescription] = useState(techstack.Javascript);
 
   // Array of images for technologies
-  const languagesImages = [
-    'languages/html.png',
-    'languages/css.png',
-    'languages/bootstrap.png',
-    'languages/tailwind.png',
-    'languages/sass.png',
-    'languages/js.png',
-    'languages/react.png',
-    '/MERN.png',
-    'languages/nodejs.png',
-    'languages/npm.png',
-    'languages/python.png',
-    'languages/php.png',
-    'languages/c.png',
-    'languages/linux.png'
-  ];
+  const languagesImages = ['javascript','python','c','php','html','css','aws','mongodb','mysql','react','redux','express','nextjs','nodejs','bootstrap','mui','github','tailwind','git','vscode','pycharm','anaconda','vim','linux','windows'];
 
   // Framer Motion variants for animations
   const variants = {
@@ -107,7 +92,7 @@ function About() {
                 <div className="logos-container">
                   <Marquee style={{ width: '95vw', marginLeft: '1rem' }} direction='left' autoFill='true'>
                     {languagesImages.map((images, i) => (
-                      <img src={images} alt='' key={i} className='logos' />
+                      <img src={`https://skillicons.dev/icons?i=${images}`} alt="Languages" className='logos'/>
                     ))}
                   </Marquee>
                 </div>

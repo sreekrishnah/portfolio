@@ -107,6 +107,22 @@ function Skills() {
                         </div>
 
                         <div>
+                        <div className="exp-container">
+                              <div className='skill-title-card'>
+                                <img src="https://img.icons8.com/?size=100&id=17949&format=png&color=000000" alt="" className='titlebox-thumnail'/>
+                                <div className="title-card-txt">
+                                  <h3>Google</h3>
+                                  <span>3rd Aug 2024</span>
+                                </div>
+                              </div>
+                              <div className='skill-description'>
+                                <p>"Successfully completed Agile Project Management an online non-credit course authorized by <b><a href='https://coursera.org/verify/XT77624ESRY7' style={{color:'white'}}> Google </a></b>and offered through Coursera.</p>
+                              </div>
+                        </div>
+
+                        </div>
+
+                        <div>
                           
                           <div className="exp-container">
                                 <div className='skill-title-card'>

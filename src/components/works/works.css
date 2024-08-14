@@ -78,15 +78,10 @@
 
 .works-text-container h2{
     color: orange;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 700;
     text-shadow: 3px 3px 5px #000000;
-}
-
-.works-text-container span{
-    color:#706b6b ;
-    font-size: .9rem;
-    font-weight: 600;
+    margin-bottom: 1rem;
 }
 
 .works-text-container p{
