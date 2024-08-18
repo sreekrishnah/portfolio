@@ -18,7 +18,7 @@ const workList = [
     id:2,
     img:'/weather.png',
     name:'Weather Today',
-    techstack:'react,nodejs',
+    techstack:'vite,react,nodejs',
     description:`Designed and developed a global weather application, integrating OpenWeather API for real-time forecasts, offering seamless access to accurate weather worldwide.`,
     button:'Get weather',
     viewlink:'https://weather-from-openweather.netlify.app/',
@@ -26,6 +26,16 @@ const workList = [
   },
   {
     id:3,
+    img:'/sunnyside.jpg',
+    name:'Sunnyside Landing Page',
+    techstack:'vite,react',
+    description:`Developed a Landing page application for a madeup organization sunnyside. Which offer a understanding of what sunnyside for the organization customers.`,
+    button:'Go There',
+    viewlink:'https://sunnyside-landing-page-frontend.netlify.app/',
+    codelink:'https://github.com/SritharanKalimuthu/FrontendMentor/tree/main/Sunnyside-Landing-Page'
+  },
+  {
+    id:4,
     img:'/bookstore.jpeg',
     name:'Book Store - CRUD',
     techstack:'react,express,mongodb,nodejs,tailwind',
@@ -33,7 +43,7 @@ const workList = [
     codelink:'https://github.com/SritharanKalimuthu/BookStore'
   },
   {
-    id:4,
+    id:5,
     img:'/banking.png',
     name:'Internet Banking',
     techstack:'php,mysql',
