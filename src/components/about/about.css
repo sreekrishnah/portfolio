@@ -119,15 +119,23 @@
     font-weight: 600;
     margin-right: 1.5rem;
     cursor: pointer;
+    text-transform: capitalize;
 }
 
-.tech-box-container li:nth-child(2) img{
-    width: 1.6rem;
+.tech-box-container li>img{
+    width: 1.4rem;
+    margin:0 5px 0 0;
 }
+
+.tech-box-container li:nth-child(1) img{
+    width: 1.3rem;
+}
+
 
 .tech-box-container li:nth-child(3) img{
-    background-color: #fff;
-    border-radius: 50%;
+    border-radius: 5px;
+    width: 4rem;
+    height: 2rem;
 }
 
 

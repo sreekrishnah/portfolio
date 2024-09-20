@@ -5,17 +5,17 @@ import './about.css';
 
 function About() {
   // State for active section and its description
-  const [activeSection, setActiveSection] = useState("Javascript");
+  const [activeSection, setActiveSection] = useState("javascript");
 
   // Object containing descriptions for each section
   const techstack = {
-    Javascript: "I possess a strong command of JavaScript and its advanced concepts, coupled with practical experience gained through the development of several foundational projects. These include applications such as calculators, tic-tac-toe games, and to-do lists, all of which demonstrate my proficiency in applying JavaScript principles to real-world scenarios. For a comprehensive overview of my projects, please visit my GitHub profile.",
-    React: "I have advanced through more than half of my React learning journey, acquiring proficiency in both fundamental and advanced concepts. Currently, I am focused on leveraging this knowledge to develop real-time projects. Notable projects include a weather forecasting web application, a QR code generator, and an Amazon best-selling bookshelf application.",
+    javascript: "I possess a strong command of JavaScript and its advanced concepts, coupled with practical experience gained through the development of several foundational projects. These include applications such as calculators, tic-tac-toe games, and to-do lists, all of which demonstrate my proficiency in applying JavaScript principles to real-world scenarios. For a comprehensive overview of my projects, please visit my GitHub profile.",
+    react: "I have advanced through more than half of my React learning journey, acquiring proficiency in both fundamental and advanced concepts. Currently, I am focused on leveraging this knowledge to develop real-time projects. Notable projects include a weather forecasting web application, a QR code generator, and an Amazon best-selling bookshelf application.",
     MERN: "I am actively advancing my skills in the MERN stack, and enhancing my expertise in Express.js and MongoDB. Recently, I have developed a CRUD application for a bookstore, empowering users to seamlessly manage book items. Additionally, I am continuously refining my skills by undertaking a variety of beginner-level projects. And I am giving efforts to expand my knowledge and refine my abilities in MERN stack.",
-    Bootstrap: "Bootstrap is an exceptional CSS library that significantly accelerates project development. While I have utilized Bootstrap in many of my projects for its efficiency, I find that custom styling, meticulously crafted line by line, enhances the satisfaction of my work. As a result, I often opt for personalized styling, although I am proficient in integrating Bootstrap or Tailwind CSS when the project requirements demand it."
+    tailwind: "Tailwind & Bootstrap are an exceptional CSS library that significantly accelerates project development. While I have utilized tailwind in many of my projects for its efficiency, I find that custom styling, meticulously crafted line by line, enhances the satisfaction of my work. As a result, I often opt for personalized styling, although I am proficient in integrating Tailwindcss or Bootstrap when the project requirements demand it."
   };
 
-  const [description, setDescription] = useState(techstack.Javascript);
+  const [description, setDescription] = useState(techstack.javascript);
 
   // Array of images for technologies
   const languagesImages = ['javascript','python','c','php','html','css','aws','mongodb','mysql','react','redux','express','nextjs','nodejs','bootstrap','mui','github','tailwind','git','vscode','pycharm','anaconda','vim','linux','windows'];
@@ -80,7 +80,8 @@ function About() {
                   {/* Mapping over techstack object */}
                   {Object.entries(techstack).map(([key, value]) => (
                     <li className={activeSection === key ? 'activesection' : 'arsenal-list'} onClick={() => handleSetActiveSection(key, value)} key={key}>
-                      <img src={`/${key}.png`} alt='' />{key}
+                      {key=='MERN'?<img src={`/${key}.png`} alt='' />:<img src={`https://skillicons.dev/icons?i=${key}`} alt='' />}
+                      {key}
                     </li>
                   ))}
                 </ul>
