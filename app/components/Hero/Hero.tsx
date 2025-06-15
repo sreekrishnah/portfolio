@@ -3,7 +3,7 @@
 import { motion, Variants, easeOut } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Mail, Linkedin, Github, Phone, ChevronDown } from 'lucide-react';
+import { Mail, Linkedin, Github, Phone } from 'lucide-react';
 import TypeWriter from '../TypeWriter/TypeWriter';
 
 const Hero: React.FC = () => {
@@ -119,7 +119,7 @@ const Hero: React.FC = () => {
             variants={slideDownVariant}
             style={{ textShadow: '3px 3px 10px rgba(21, 21, 22, 0.8)' }}
           >
-            Hello, I'm Sritharan Kalimuthu,
+            Hello, I&apos;m Sritharan Kalimuthu,
           </motion.h2>
 
           {/* Main Title with Typewriter */}

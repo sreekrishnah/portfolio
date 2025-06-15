@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import React, { useState, useCallback, useMemo } from 'react';
 import { Variants, motion, AnimatePresence } from 'framer-motion';
-import { techStack, technologies, roles, personalInfo, TechStack, Technology, Role } from '../../data/AboutData';
+import { techStack, technologies, roles, personalInfo, Technology } from '../../data/AboutData';
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -57,18 +57,18 @@ const slideInRightVariants: Variants = {
   }
 };
 
-const cardHoverVariants: Variants = {
-  rest: { scale: 1, y: 0 },
-  hover: {
-    scale: 1.05,
-    y: -10,
-    transition: {
-      type: "spring",
-      stiffness: 300,
-      damping: 20
-    }
-  }
-};
+// const cardHoverVariants: Variants = {
+//   rest: { scale: 1, y: 0 },
+//   hover: {
+//     scale: 1.05,
+//     y: -10,
+//     transition: {
+//       type: "spring",
+//       stiffness: 300,
+//       damping: 20
+//     }
+//   }
+// };
 
 const TechIcon: React.FC<{ tech: Technology; index: number }> = React.memo(({ tech, index }) => {
     const getIconUrl = (iconName: string) => {

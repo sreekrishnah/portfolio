@@ -7,5 +7,5 @@ export interface SkillExperience {
     description: string;
     link?: string;
     status?: 'completed' | 'in-progress';
-    skills?: any;
+    skills?: unknown;
 }

@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import { Variants, motion, AnimatePresence } from 'framer-motion';
-import { ChevronLeft, ChevronRight, ExternalLink, Calendar, Award, Clock, Star } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ExternalLink, Calendar, Award, Star } from 'lucide-react';
 import { SkillExperience } from '@/app/types/SkillDataType';
 import { skillsData } from '@/app/data/SkillData';
 
@@ -12,7 +12,7 @@ const SkillCard: React.FC<{
   position: number;
   totalVisible: number;
   cardIndex: number;
-}> = ({ skill, isCenter, position, totalVisible, cardIndex }) => {
+}> = ({ skill, isCenter, position, totalVisible }) => {
   const getCardStyle = () => {
     const centerIndex = Math.floor(totalVisible / 2);
     const distance = Math.abs(position - centerIndex);
@@ -245,12 +245,12 @@ const Skill: React.FC = () => {
     setTimeout(() => setIsAnimating(false), 500);
   };
 
-  const goToSlide = (index: number) => {
-    if (isAnimating || index === currentIndex) return;
-    setIsAnimating(true);
-    setCurrentIndex(index);
-    setTimeout(() => setIsAnimating(false), 500);
-  };
+  // const goToSlide = (index: number) => {
+  //   if (isAnimating || index === currentIndex) return;
+  //   setIsAnimating(true);
+  //   setCurrentIndex(index);
+  //   setTimeout(() => setIsAnimating(false), 500);
+  // };
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -314,7 +314,7 @@ const Skill: React.FC = () => {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
               >
-                "The best thing about a boolean is even if you are wrong, you are only off by a bit."
+                &quot;The best thing about a boolean is even if you are wrong, you are only off by a bit.&quot;
               </motion.blockquote>
             </motion.div>
           </div>
