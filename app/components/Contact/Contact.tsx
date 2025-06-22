@@ -228,6 +228,7 @@ const Contact: React.FC = () => {
           style: {
             color: '#fff',
             background: 'rgb(23, 24, 23)',
+            fontSize: 'clamp(0.75rem, 1vw + 0.5rem, 0.85rem)',
           },
           success: {
             style: {
