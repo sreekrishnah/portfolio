@@ -169,37 +169,8 @@ const About: React.FC = () => {
   return (
     <section
       id="About"
-      className="relative min-h-screen w-full bg-gradient-to-b from-[#16072d] via-indigo-900 to-purple-900"
+      className="relative min-h-screen w-full overflow-hidden"
     >
-      {/* Background Images */}
-      <div className="absolute inset-0 z-0">
-        {/* Clouds */}
-        <div className="absolute top-0 w-full h-80 md:h-32 opacity-80">
-          <Image
-            src="/clouds.svg"
-            alt="Clouds"
-            fill
-            className="object-cover object-top"
-            priority
-            sizes="100vw"
-          />
-        </div>
-        {/* Forest */}
-        <div className="absolute -bottom-7 h-screen w-screen">
-          <Image
-            src="/forest.png"
-            alt="Forest"
-            fill
-            className="object-cover object-bottom"
-            priority
-            sizes="100vw"
-          />
-        </div>
-      </div>
-
-      {/* Backdrop blur */}
-      <div className="absolute inset-0 backdrop-blur-xs z-10" />
-
       {/* Main Content */}
       <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-0 pt-8 md:pt-18 xl:pt-26">
         <motion.div
@@ -293,7 +264,7 @@ const About: React.FC = () => {
                             group-hover:border-white/40 
                             sm:rounded-[60%_40%_30%_70%_/_60%_30%_70%_40%]
                             sm:${index === 1 ? 'rounded-[56%_44%_20%_80%_/_84%_60%_40%_16%]' : ''}
-                            sm:${index === 2 ? 'rounded-[91%_9%_20%_80%_/_65%_66%_34%_35%]' : ''}
+                            sm:${index === 2 ? 'rounded-[91%_9%_20%_80%_/_65%_66%_40%_35%]' : ''}
                             rounded-none
                             `}
                         >
@@ -301,11 +272,11 @@ const About: React.FC = () => {
                           src={`/${role.image}`}
                           alt={role.title}
                           className={`
-                            w-full h-full object-cover transition-all duration-500 group-hover:opacity-60
+                            object-cover transition-all duration-500 group-hover:opacity-60
                             rounded-none 
                             sm:rounded-[60%_40%_30%_70%_/_60%_30%_70%_40%]
                             ${index === 1 ? 'sm:rounded-[56%_44%_20%_80%_/_84%_60%_40%_16%]' : ''}
-                            ${index === 2 ? 'sm:rounded-[91%_9%_20%_80%_/_65%_66%_34%_35%]' : ''}
+                            ${index === 2 ? 'sm:rounded-[91%_9%_20%_80%_/_65%_66%_40%_35%]' : ''}
                           `}
                           loading="lazy"
                         />
@@ -357,7 +328,7 @@ const About: React.FC = () => {
                 {Object.keys(techStack).map((section, index) => (
                   <motion.button
                     key={section}
-                    className={`text-[8px] md:text-xs flex flex-row gap-0.5 md:gap-1 items-center px-2 md:px-3 py-2 pb-2 rounded-lg font-medium transition-all duration-300 ${
+                    className={`text-[8px] sm:text-xs flex flex-row gap-0.5 md:gap-1 items-center px-2 md:px-3 py-2 pb-2 rounded-lg font-medium transition-all duration-300 ${
                       activeSection === section
                         ? 'bg-orange-500 text-white shadow-lg shadow-orange-500/30'
                         : 'bg-white/10 text-white/70 hover:bg-white/20'

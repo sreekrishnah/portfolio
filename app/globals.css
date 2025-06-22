@@ -28,11 +28,6 @@ a{
   cursor: pointer;
 }
 
-a:visited,a:link{
-  color: #fff;
-  text-decoration: none;
-}
-
 li{
   list-style: none;
 }

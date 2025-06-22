@@ -58,8 +58,8 @@ export interface TechStack {
     },
     {
       id: '2',
-      title: 'UI/UX Engineer',
-      description: 'Crafting intuitive and visually stunning user experiences',
+      title: 'Software Architect',
+      description: 'Design systems that are scalable, secure, and efficient.',
       image: 'designer.jpg',
       gradient: 'from-pink-500 to-orange-500'
     },

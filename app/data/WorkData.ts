@@ -36,7 +36,7 @@ export const workList: Work[] = [
     img: '/markdown-editor.png',
     name: 'Live Markdown Editor',
     techstack: 'NextJS, Express, MongoDB, NodeJS, Tailwind',
-    description: 'Architected a CRUD book store application using MERN stack technology, facilitating seamless addition and removal of books. Empowering users with intuitive controls for efficient book management.',
+    description: 'A real-time tool for writing and previewing Markdown instantly. It boosts productivity by reducing context switching and streamlining content. Perfect for developers and writers with shareable output effortlessly.',
     viewlink: 'https://mrkdwn-edtr-frntnd.vercel.app/',
     codelink:'https://github.com/sreekrishnah/mrkdwn-edtr-frntnd'
   },

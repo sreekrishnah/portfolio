@@ -68,35 +68,7 @@ const Contact: React.FC = () => {
   const isFormValid = formData.name.trim() && formData.email.trim() && formData.message.trim();
 
   return (
-    <section id="Contact" className="relative min-h-screen bg-gradient-to-b from-[#100521] via-indigo-900 to-blue-900 overflow-hidden">
-        {/* Background Images */}
-        <div className="absolute inset-0 z-0">
-                {/* Clouds */}
-                <div className="absolute top-0 w-full h-80 md:h-32 opacity-80">
-                <Image
-                    src="/clouds.svg"
-                    alt="Clouds"
-                    fill
-                    className="object-cover object-top"
-                    priority
-                    sizes="100vw"
-                />
-                </div>
-                {/* Forest */}
-                <div className="absolute -bottom-7 h-screen w-screen">
-                <Image
-                    src="/forest.png"
-                    alt="Forest"
-                    fill
-                    className="object-cover object-bottom"
-                    priority
-                    sizes="100vw"
-                />
-                </div>
-            </div>
-
-    {/* Backdrop blur */}
-    <div className="absolute inset-0 backdrop-blur-xs z-10" />
+    <section id="Contact" className="relative min-h-screen overflow-hidden">
 
       {/* Main Content */}
       <div className="relative z-10 container mx-auto px-4 py-16 min-h-screen flex items-center">
